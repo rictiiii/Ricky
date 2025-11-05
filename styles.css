@@ -295,7 +295,7 @@ main {
   scroll-margin-top: 30px;
   white-space: pre-wrap;
   letter-spacing: 0;
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
