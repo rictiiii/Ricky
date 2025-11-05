@@ -350,9 +350,10 @@ main {
 
 .impact-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-lg);
   margin: var(--spacing-8) 0 var(--spacing-12);
+  max-width: 100%;
 }
 
 .impact-card {
@@ -743,6 +744,7 @@ li::marker {
 
   .impact-cards {
     grid-template-columns: 1fr;
+    gap: var(--gap-md);
   }
 
   .card-grid {
