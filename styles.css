@@ -274,28 +274,27 @@ main {
    ======================================== */
 
 .hero {
-  padding: var(--spacing-24) 0 var(--spacing-16);
-  text-align: center;
+  padding: var(--spacing-24) 0 var(--spacing-20);
+  text-align: left;
 }
 
-.hero h1 {
-  margin-bottom: var(--spacing-4);
+.hero-name {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-6);
+  scroll-margin-top: 30px;
+  white-space: pre-wrap;
 }
 
-.hero-subtitle {
+.hero-description {
   font-size: var(--font-size-xl);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
-  max-width: 800px;
-  margin: 0 auto var(--spacing-8);
-}
-
-.hero-divider {
-  width: 60px;
-  height: 3px;
-  background: var(--color-accent);
-  margin: var(--spacing-8) auto;
-  border-radius: 2px;
+  max-width: 580px;
+  margin: 0;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 /* ========================================
@@ -394,7 +393,115 @@ main {
 }
 
 /* ========================================
-   CARDS & COMPONENTS
+   PROJECT CARDS (HOMEPAGE)
+   ======================================== */
+
+.work-section {
+  padding: var(--spacing-20) 0;
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  will-change: transform;
+  transition: transform var(--transition-base);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card-inner {
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  padding: var(--spacing-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  transition: all var(--transition-base);
+}
+
+.project-card:hover .project-card-inner {
+  background: var(--color-hover);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.02);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.project-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.project-description {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  max-width: 800px;
+}
+
+.project-tags {
+  display: flex;
+  gap: var(--gap-sm);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-2);
+}
+
+.tag {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.project-card:hover .tag {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ========================================
+   CARDS & COMPONENTS (CASE STUDY)
    ======================================== */
 
 .card-grid {
@@ -544,8 +651,9 @@ li::marker {
 
 @media (max-width: 1014px) {
   :root {
-    --font-size-5xl: 2.5rem;
-    --font-size-4xl: 2rem;
+    --font-size-6xl: 2.5rem;
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.75rem;
     --font-size-3xl: 1.5rem;
   }
 
@@ -555,6 +663,36 @@ li::marker {
 
   .hero {
     padding: var(--spacing-16) 0 var(--spacing-12);
+  }
+
+  .hero-name {
+    font-size: var(--font-size-5xl);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-lg);
+    max-width: 100%;
+  }
+
+  .work-section {
+    padding: var(--spacing-12) 0;
+  }
+
+  .project-cards {
+    gap: var(--spacing-16);
+  }
+
+  .project-card-inner {
+    padding: var(--spacing-6);
+    gap: var(--spacing-6);
+  }
+
+  .project-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .project-description {
+    font-size: var(--font-size-lg);
   }
 
   .case-study-header {
