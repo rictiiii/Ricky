@@ -457,7 +457,8 @@ main {
   will-change: transform, opacity;
   transition: all var(--transition-slow);
   opacity: 0;
-  transform: scale(0.8) translateY(60px);
+  transform: perspective(1200px) scale(0.8) translateY(60px) rotateX(20deg);
+  transform-style: preserve-3d;
 }
 
 .project-card.is-visible {
@@ -479,16 +480,16 @@ main {
 @keyframes zoomIn {
   0% {
     opacity: 0;
-    transform: scale(0.8) translateY(60px);
+    transform: perspective(1200px) scale(0.8) translateY(60px) rotateX(20deg);
   }
   100% {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: perspective(1200px) scale(1) translateY(0) rotateX(0deg);
   }
 }
 
 .project-card:hover {
-  transform: translateY(-16px) !important;
+  transform: perspective(1200px) scale(1) translateY(-16px) rotateX(0deg) !important;
 }
 
 .project-card-inner {
