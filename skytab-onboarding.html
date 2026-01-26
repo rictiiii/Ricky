@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=57">
   <link rel="stylesheet" href="hero-section.css">
-  <link rel="stylesheet" href="skytab-onboarding.css">
+  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css">
   <script src="navigation.js" defer></script>
   <script type="text/javascript">!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.1/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();</script>
 </head>
@@ -29,7 +29,7 @@
         <div class="nav-links">
           <a href="index.html" class="nav-link">Work</a>
           <a href="#" class="nav-link">CV</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="contact/contact.html" class="nav-link">Contact</a>
         </div>
       </div>
     </nav>
@@ -48,9 +48,7 @@
             </div>
           </div>
           <div class="hero-image-container">
-            <div class="hero-image-placeholder">
-              Product Screenshot
-            </div>
+            <img src="skytab-onboarding/Hero.png" alt="SkyTab Onboarding Dashboard" style="width: 100%; height: auto; border-radius: 16px;">
           </div>
         </div>
         <div class="hero-metrics">
@@ -89,47 +87,113 @@
           <h3>The Business Challenge</h3>
           <p>SkyTab merchants exist in vastly different states throughout their lifecycle—from pre-launch setup to mature operations—yet the MX Hub interface treated all merchants the same. This one-size-fits-all approach created friction, confusion, and missed opportunities for engagement at critical moments.</p>
 
+          <div class="case-study-image" style="width: 60%; margin-left: auto; margin-right: auto;">
+            <img src="dashboard-before.png" alt="Dashboard before redesign showing scattered information and unclear hierarchy">
+            <div class="case-study-image-caption">
+              Previous dashboard design with scattered information and unclear visual hierarchy
+            </div>
+          </div>
+
           <p><strong>Three distinct merchant states required different experiences:</strong></p>
 
-          <h4>🚀 State 1: Merchant is Launching</h4>
-          <p>Merchants preparing for launch need to:</p>
-          <ul>
-            <li>Complete basic setup requirements</li>
-            <li>Access critical launching information (scheduled install date, menu programming status)</li>
-            <li>Connect with their Customer Success Manager (CSM)</li>
-            <li>Handle pre-launch activities (rescheduling, file uploads, CSM coordination)</li>
-          </ul>
-          <p><strong>Pain Point:</strong> No clear path to required actions; launching information scattered and hard to find</p>
+          <div class="merchant-states-flow">
+            <!-- State 1 -->
+            <div class="state-card">
+              <div class="state-header">
+                <span class="state-icon">🚀</span>
+                <h4 class="state-title">State 1: Merchant is Launching</h4>
+              </div>
+              <div class="state-content">
+                <p class="state-description">Merchants preparing for launch need to:</p>
+                <ul class="state-list">
+                  <li>Complete basic setup requirements</li>
+                  <li>Access critical launching information (scheduled install date, menu programming status)</li>
+                  <li>Connect with their Customer Success Manager (CSM)</li>
+                  <li>Handle pre-launch activities (rescheduling, file uploads, CSM coordination)</li>
+                </ul>
+                <div class="state-pain-point">
+                  <strong>Pain Point:</strong> No clear path to required actions; launching information scattered and hard to find
+                </div>
+              </div>
+            </div>
 
-          <h4>⚙️ State 2: Merchant Just Completed Setup (Pre-live)</h4>
-          <p>Merchants who completed required setup but haven't gone live yet need to:</p>
-          <ul>
-            <li>Complete additional feature configuration</li>
-            <li>Learn about the SkyTab system through tutorials</li>
-            <li>Stay informed about SkyTab releases</li>
-            <li>Prepare for launch day</li>
-          </ul>
-          <p><strong>Pain Point:</strong> No dashboard data available yet, but interface didn't guide merchants on what to do next</p>
+            <!-- Arrow -->
+            <div class="state-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
 
-          <h4>📊 State 3: Merchant Has Been Live</h4>
-          <p>Established merchants with operational systems need to:</p>
-          <ul>
-            <li>Access real-time data and dashboards</li>
-            <li>Set up new features as they're released</li>
-            <li>Configure features their business newly needs</li>
-            <li>Continue learning about system capabilities</li>
-            <li>Stay updated on releases</li>
-          </ul>
-          <p><strong>Pain Point:</strong> Dashboard existed but lacked depth; feature discovery was poor; status indicators missing</p>
+            <!-- State 2 -->
+            <div class="state-card">
+              <div class="state-header">
+                <span class="state-icon">⚙️</span>
+                <h4 class="state-title">State 2: Merchant Just Completed Setup (Pre-live)</h4>
+              </div>
+              <div class="state-content">
+                <p class="state-description">Merchants who completed required setup but haven't gone live yet need to:</p>
+                <ul class="state-list">
+                  <li>Complete additional feature configuration</li>
+                  <li>Learn about the SkyTab system through tutorials</li>
+                  <li>Stay informed about SkyTab releases</li>
+                  <li>Prepare for launch day</li>
+                </ul>
+                <div class="state-pain-point">
+                  <strong>Pain Point:</strong> No dashboard data available yet, but interface didn't guide merchants on what to do next
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="state-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- State 3 -->
+            <div class="state-card">
+              <div class="state-header">
+                <span class="state-icon">📊</span>
+                <h4 class="state-title">State 3: Merchant Has Been Live</h4>
+              </div>
+              <div class="state-content">
+                <p class="state-description">Established merchants with operational systems need to:</p>
+                <ul class="state-list">
+                  <li>Access real-time data and dashboards</li>
+                  <li>Set up new features as they're released</li>
+                  <li>Configure features their business newly needs</li>
+                  <li>Continue learning about system capabilities</li>
+                  <li>Stay updated on releases</li>
+                </ul>
+                <div class="state-pain-point">
+                  <strong>Pain Point:</strong> Dashboard existed but lacked depth; feature discovery was poor; status indicators missing
+                </div>
+              </div>
+            </div>
+          </div>
 
           <h3>The Opportunity</h3>
           <p>By creating a state-aware system that adapts to merchant lifecycle stages, we could:</p>
-          <ul>
-            <li>Reduce cognitive load by showing only relevant information</li>
-            <li>Accelerate time-to-value for new merchants</li>
-            <li>Improve feature adoption across all merchant segments</li>
-            <li>Create a more engaging, helpful experience that grows with the merchant</li>
-          </ul>
+
+          <div class="opportunity-cards">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">🧠</div>
+              <p class="opportunity-text">Reduce cognitive load by showing only relevant information</p>
+            </div>
+            <div class="opportunity-card">
+              <div class="opportunity-icon">⚡</div>
+              <p class="opportunity-text">Accelerate time-to-value for new merchants</p>
+            </div>
+            <div class="opportunity-card">
+              <div class="opportunity-icon">📈</div>
+              <p class="opportunity-text">Improve feature adoption across all merchant segments</p>
+            </div>
+            <div class="opportunity-card">
+              <div class="opportunity-icon">✨</div>
+              <p class="opportunity-text">Create a more engaging, helpful experience that grows with the merchant</p>
+            </div>
+          </div>
         </section>
 
         <section class="content-section">
@@ -163,17 +227,19 @@
 
           <h3>Research & Discovery</h3>
 
-          <div class="case-study-image">
-            <img src="skytab-onboarding-workshop.jpg" alt="Workshop session with team members collaborating on merchant states">
-            <div class="case-study-image-caption">
-              Workshop session mapping merchant lifecycle states and identifying pain points across the journey
+          <div class="image-grid-2col">
+            <div class="case-study-image">
+              <img src="skytab-onboarding/skytab-onboarding-workshop.jpg" alt="Workshop session with team members collaborating on merchant states">
+              <div class="case-study-image-caption">
+                Workshop session mapping merchant lifecycle states and identifying pain points across the journey
+              </div>
             </div>
-          </div>
 
-          <div class="case-study-image">
-            <img src="skytab-onboarding-affinity-mapping.jpg" alt="Affinity mapping exercise organizing user research findings">
-            <div class="case-study-image-caption">
-              Affinity mapping helped identify patterns across merchant segments and prioritize features for each state
+            <div class="case-study-image">
+              <img src="skytab-onboarding/skytab-onboarding-affinity-mapping.jpg" alt="Affinity mapping exercise organizing user research findings">
+              <div class="case-study-image-caption">
+                Affinity mapping helped identify patterns across merchant segments and prioritize features for each state
+              </div>
             </div>
           </div>
 
@@ -181,30 +247,49 @@
 
           <h4>Multi-State Wizard System</h4>
           <p>Created a dynamic wizard that changes content, tone, and actions based on merchant lifecycle state:</p>
-          <ul>
-            <li><strong>Pre-launch:</strong> Task-oriented with deadlines and CSM information</li>
-            <li><strong>Pre-live:</strong> Education-focused with system tutorials</li>
-            <li><strong>Live:</strong> Dashboard-first with feature discovery</li>
-          </ul>
 
-          <h4>UI Refresh Rationale</h4>
+          <div class="wizard-states-flow">
+            <div class="wizard-state-card">
+              <h5 class="wizard-state-title">Pre-launch</h5>
+              <p class="wizard-state-description">Task-oriented with deadlines and CSM information</p>
+            </div>
 
-          <p><strong>Updated Tile Ordering:</strong> Reorganized information hierarchy to prioritize actions over information, placing urgent tasks at the top and contextual resources lower.</p>
+            <div class="wizard-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12L20 12M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
 
-          <p><strong>Merged Intro Screens:</strong> Combined redundant welcome flows into a single, contextual welcome that adapts to merchant state. This reduced initial clicks and got merchants to value faster.</p>
+            <div class="wizard-state-card">
+              <h5 class="wizard-state-title">Pre-live</h5>
+              <p class="wizard-state-description">Education-focused with system tutorials</p>
+            </div>
 
-          <p><strong>Illustration Background Changes:</strong> Moved from generic backgrounds to state-specific illustrations that reinforce where merchants are in their journey—creating visual continuity and recognition.</p>
+            <div class="wizard-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12L20 12M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
 
-          <p><strong>Removed Tooltips:</strong> Eliminated tooltips in favor of clearer labels and in-context help. Tooltips were masking poor information architecture; better organization eliminated the need for explanatory overlays.</p>
+            <div class="wizard-state-card">
+              <h5 class="wizard-state-title">Live</h5>
+              <p class="wizard-state-description">Dashboard-first with feature discovery</p>
+            </div>
+          </div>
 
           <h4>Illustration System (Collaboration with Trey Ingram)</h4>
           <p>Worked with illustrator Trey Ingram to develop a cohesive illustration system that:</p>
-          <ul>
-            <li>Visually represents each merchant state</li>
-            <li>Uses consistent style and color language</li>
-            <li>Feels professional yet approachable</li>
-            <li>Works across different screen sizes</li>
-          </ul>
+
+          <div class="illustration-system-bullets">
+            <div class="illustration-bullet-item">Visually represents each merchant state</div>
+            <div class="illustration-bullet-item">Uses consistent style and color language</div>
+            <div class="illustration-bullet-item">Feels professional yet approachable</div>
+            <div class="illustration-bullet-item">Works across different screen sizes</div>
+          </div>
+
+          <div class="illustration-system-image-solo">
+            <img src="skytab-onboarding/Icons.png" alt="Illustration system icons representing different merchant states">
+          </div>
         </section>
 
         <section class="content-section">
@@ -216,7 +301,7 @@
           <p>The core of the solution is a dashboard that intelligently adapts to merchant lifecycle stage:</p>
 
           <div class="case-study-image">
-            <img src="skytab-onboarding-user-flow.png" alt="User flow diagram showing merchant lifecycle states and transitions">
+            <img src="skytab-onboarding/skytab-onboarding-user-flow.png" alt="User flow diagram showing merchant lifecycle states and transitions">
             <div class="case-study-image-caption">
               Complete user flow mapping how merchants transition between states and what they see at each stage
             </div>
@@ -225,13 +310,13 @@
           <h3>Design Iterations</h3>
 
           <div class="case-study-image">
-            <img src="skytab-onboarding-wireframes.png" alt="Wireframe iterations exploring different dashboard layouts">
+            <img src="skytab-onboarding/skytab-onboarding-wireframes.png" alt="Wireframe iterations exploring different dashboard layouts">
             <div class="case-study-image-caption">
               Wireframe explorations testing different information hierarchies and layouts for each merchant state
             </div>
           </div>
 
-          <h3>State-Specific Experiences</h3>
+          <h3>Final Execution & Outcomes</h3>
 
           <h4>For Launching Merchants</h4>
           <p><strong>Primary Focus:</strong> Task completion and preparation</p>
@@ -245,9 +330,9 @@
           </ul>
 
           <div class="case-study-image">
-            <img src="launch-dashboard.png" alt="Launch Center dashboard for pre-launch merchants">
+            <img src="skytab-onboarding/Render2.png" alt="Final dashboard design for launching merchants">
             <div class="case-study-image-caption">
-              Launch Center dashboard for merchants preparing to go live, featuring task checklist, installation countdown, and CSM information
+              Final dashboard design for new merchants preparing to launch, featuring task completion and preparation tools
             </div>
           </div>
 
@@ -263,7 +348,7 @@
           </ul>
 
           <div class="case-study-image">
-            <img src="onboarding-wizard-screens.png" alt="Onboarding wizard screens adapting to merchant state">
+            <img src="skytab-onboarding/onboarding-wizard-screens.png" alt="Onboarding wizard screens adapting to merchant state">
             <div class="case-study-image-caption">
               State-aware wizard screens that adapt content and tone based on merchant lifecycle stage
             </div>
@@ -281,9 +366,9 @@
           </ul>
 
           <div class="case-study-image">
-            <img src="grow-my-business-dashboard.png" alt="Dashboard for live merchants with data and insights">
+            <img src="skytab-onboarding/Render1.png" alt="Final dashboard design for existing live merchants">
             <div class="case-study-image-caption">
-              Dashboard for live merchants showcasing real-time data, feature discovery hub, and actionable insights
+              Final dashboard design for existing merchants with real-time data, insights, and ongoing optimization features
             </div>
           </div>
 
