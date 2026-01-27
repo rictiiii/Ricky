@@ -40,7 +40,7 @@
 .hero-wrapper {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #FDE047 0%, #FB923C 100%);
+  background: linear-gradient(135deg, #E5A500 0%, #DC6B2F 100%);
 }
 
 /* Hero Section - Remove negative margin since nav is not fixed */
@@ -104,9 +104,7 @@
 
 /* Orange gradient for accent sections */
 .case-study-section.section-accent {
-  background:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.25'/%3E%3C/svg%3E"),
-    linear-gradient(135deg, #FF8A51 0%, #FFDA7A 100%);
+  background: transparent;
 }
 
 .case-study-section.section-accent::before {
