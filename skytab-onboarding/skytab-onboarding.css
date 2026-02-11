@@ -43,19 +43,7 @@
   background: transparent;
 }
 
-.hero-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  z-index: 1;
-  pointer-events: none;
-}
+/* Removed overlay and blur to show clean Unicorn Studio background */
 
 .unicorn-studio-background {
   position: absolute;

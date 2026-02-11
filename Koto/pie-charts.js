@@ -84,38 +84,27 @@
 
       segmentGroup.appendChild(path);
 
-      // Calculate label position (outside the pie)
+      // Calculate label position (INSIDE the colored area)
       const labelAngle = startAngle + (angleSize / 2);
-      const labelRadius = radius + 50;
+      const labelRadius = radius * 0.6; // Position at 60% of radius to be inside
       const labelPos = polarToCartesian(centerX, centerY, labelRadius, labelAngle);
 
-      // Create connector line
-      const lineStart = polarToCartesian(centerX, centerY, radius + 5, labelAngle);
-      const lineEnd = polarToCartesian(centerX, centerY, radius + 35, labelAngle);
-
-      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', lineStart.x);
-      line.setAttribute('y1', lineStart.y);
-      line.setAttribute('x2', lineEnd.x);
-      line.setAttribute('y2', lineEnd.y);
-      line.setAttribute('class', 'pie-label-line');
-      line.setAttribute('opacity', '0');
-      svg.appendChild(line);
-
-      // Create label text
+      // Create label text (white color, inside segment)
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       text.setAttribute('x', labelPos.x);
       text.setAttribute('y', labelPos.y);
-      text.setAttribute('text-anchor', labelPos.x > centerX ? 'start' : 'end');
+      text.setAttribute('text-anchor', 'middle');
       text.setAttribute('dominant-baseline', 'middle');
       text.setAttribute('class', 'pie-label');
+      text.setAttribute('fill', 'white');
+      text.setAttribute('font-size', '24');
+      text.setAttribute('font-weight', '600');
       text.setAttribute('opacity', '0');
       text.textContent = segment.value + '%';
       svg.appendChild(text);
 
       segments.push({
         path,
-        line,
         text,
         startAngle,
         endAngle,
@@ -132,27 +121,27 @@
 
   // Animate chart
   async function animateChart(container, segments) {
-    // Animate segments sequentially
-    for (let i = 0; i < segments.length; i++) {
-      const seg = segments[i];
-      await animateSegment(
+    // Animate all segments in parallel (no pause between)
+    const animations = segments.map((seg, i) =>
+      animateSegment(
         seg.path,
         seg.centerX,
         seg.centerY,
         seg.radius,
         seg.startAngle,
         seg.endAngle,
-        i * 200 // Stagger delay
-      );
-    }
+        0 // No stagger delay
+      )
+    );
+
+    await Promise.all(animations);
 
     // Fade in labels after segments complete
     setTimeout(() => {
       segments.forEach(seg => {
-        seg.line.setAttribute('opacity', '0.6');
         seg.text.setAttribute('opacity', '1');
       });
-    }, 200);
+    }, 100);
   }
 
   // Initialize charts

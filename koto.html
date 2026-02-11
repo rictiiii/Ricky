@@ -7,20 +7,24 @@
   <meta name="description" content="Designing a comprehensive automotive service platform for Toyota in Japan that combines e-commerce and digital key technology for seamless vehicle ownership">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=57">
   <link rel="stylesheet" href="hero-section.css">
-  <link rel="stylesheet" href="koto/koto.css">
+  <link rel="stylesheet" href="koto/koto.css?v=3">
   <link rel="stylesheet" href="koto/pie-charts.css">
   <script src="navigation.js" defer></script>
   <script src="koto/pie-charts.js" defer></script>
+  <script src="chat-widget.js" defer></script>
 </head>
 <body class="case-study-page">
 
   <!-- Hero Wrapper - Contains nav and hero with shared gradient background -->
   <div class="hero-wrapper">
-    <nav class="navigation">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
+      <div data-us-project="7QlU2ees1t5Gk8uhghBE" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
+    </div>
+    <nav class="navigation" style="position: relative; z-index: 1;">
       <div class="nav-container">
         <div class="nav-logo">Ricky Liu</div>
         <div class="nav-links">
@@ -32,7 +36,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" style="position: relative; z-index: 1;">
       <div class="hero-content-wrapper">
         <div class="hero-main">
           <div class="hero-text">
@@ -44,8 +48,8 @@
               <div class="hero-detail-item">iOS & Web</div>
             </div>
           </div>
-          <div class="hero-image-container">
-            <img src="koto/koto-app-home.png" alt="Koto app home screen showing service spotlight and digital key features" style="width: 100%; height: auto; border-radius: 24px;">
+          <div class="hero-image-container" style="overflow: visible; position: relative; display: flex; align-items: center; justify-content: center;">
+            <img src="Koto/Hero.png" alt="Koto app screens showing Digital Key and Appointments features" style="width: 90%; height: auto; border-radius: 24px; transform: translateY(-60px);">
           </div>
         </div>
         <div class="hero-metrics">
@@ -77,10 +81,11 @@
       <section class="case-study-section">
         <div class="section-label">Overview</div>
         <h2 class="section-title">Modernizing Vehicle Ownership</h2>
-        <div class="section-divider"></div>
-        <p>Koto is a comprehensive automotive service platform created for Toyota in Japan to modernize the vehicle ownership experience. The app combines two critical features: an online shop for automotive services and products, and a digital key system that enables contactless vehicle access and control.</p>
+        <div style="background-image: url('Koto/Overview Bg.png'); background-size: cover; background-position: center; border-radius: 16px; padding: 48px; margin: 32px 0;">
+          <p style="color: white; margin: 0 0 24px 0;">Koto is a comprehensive automotive service platform created for Toyota in Japan to modernize the vehicle ownership experience. The app combines two critical features: an online shop for automotive services and products, and a digital key system that enables contactless vehicle access and control.</p>
 
-        <p>Developed specifically for the Japanese market, the platform serves Toyota vehicle owners who want convenient access to automotive services while eliminating the friction of traditional physical keys and in-person service scheduling.</p>
+          <p style="color: white; margin: 0;">Developed specifically for the Japanese market, the platform serves Toyota vehicle owners who want convenient access to automotive services while eliminating the friction of traditional physical keys and in-person service scheduling.</p>
+        </div>
       </section>
 
       <section class="case-study-section">
@@ -99,88 +104,26 @@
       </section>
 
       <section class="case-study-section">
-        <div class="section-label">The Challenge</div>
-        <h2 class="section-title">Breaking Down User Friction</h2>
-        <div class="section-divider"></div>
-        <p>Through user research with vehicle owners and analysis of existing automotive service platforms, I identified key pain points:</p>
-
-        <div class="bento-features">
-          <div class="bento-feature bento-feature-main">
-            <div class="feature-card-icon" style="background: rgba(239, 68, 68, 0.15);">
-              <span class="material-icons" style="color: #f87171;">apps</span>
-            </div>
-            <div class="bento-feature-content">
-              <h4>Fragmented Service Experience</h4>
-              <p>Vehicle owners had to use multiple apps and websites to schedule maintenance, purchase products, and manage vehicle features. This created friction and reduced engagement with automotive services.</p>
-            </div>
-          </div>
-
-          <div class="bento-feature bento-feature-side">
-            <div class="feature-card-icon" style="background: rgba(239, 68, 68, 0.15);">
-              <span class="material-icons" style="color: #f87171;">sync_problem</span>
-            </div>
-            <div class="bento-feature-content">
-              <h4>Complex Booking Flows</h4>
-              <p>Traditional service scheduling required phone calls, multiple form submissions, and back-and-forth communication. Users wanted instant booking with transparent pricing and availability.</p>
-            </div>
-          </div>
-
-          <div class="bento-feature bento-feature-half">
-            <div class="feature-card-icon" style="background: rgba(239, 68, 68, 0.15);">
-              <span class="material-icons" style="color: #f87171;">key_off</span>
-            </div>
-            <div class="bento-feature-content">
-              <h4>Physical Key Limitations</h4>
-              <p>Users struggled with managing physical keys—losing them, sharing with family members, or needing spare keys for service appointments. They wanted modern, digital solutions.</p>
-            </div>
-          </div>
-
-          <div class="bento-feature bento-feature-half">
-            <div class="feature-card-icon" style="background: rgba(239, 68, 68, 0.15);">
-              <span class="material-icons" style="color: #f87171;">visibility_off</span>
-            </div>
-            <div class="bento-feature-content">
-              <h4>Lack of Service Transparency</h4>
-              <p>Unclear pricing, hidden fees, and uncertainty about service quality made users hesitant to book automotive services through digital platforms.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="case-study-image">
-          <div class="case-study-image-placeholder">
-            [Image: User journey map showing pain points across fragmented automotive service experience]
-          </div>
-          <div class="case-study-image-caption">
-            Research revealed multiple friction points in the traditional automotive service journey
-          </div>
-        </div>
-      </section>
-
-      <section class="case-study-section">
         <div class="section-label">Ideation</div>
         <h2 class="section-title">Defining Core Features</h2>
         <div class="section-divider"></div>
         <p>After defining the problem and pain points, my team worked together and came up with ideas, such as having an onboarding survey to better understand the users' needs for services. Combining with the client's directions, the app would have 2 main features:</p>
 
-        <div class="bento-features">
-          <div class="bento-feature bento-feature-main">
-            <div class="feature-card-icon" style="background: rgba(34, 197, 94, 0.15);">
-              <span class="material-icons" style="color: #4ade80;">storefront</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
+          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
+            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">storefront</span>
             </div>
-            <div class="bento-feature-content">
-              <h4>Online Shop</h4>
-              <p>Allows users to browse, select, and purchase various automotive services and products directly from the app</p>
-            </div>
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Online Shop</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Allows users to browse, select, and purchase various automotive services and products directly from the app</p>
           </div>
 
-          <div class="bento-feature bento-feature-side">
-            <div class="feature-card-icon" style="background: rgba(34, 197, 94, 0.15);">
-              <span class="material-icons" style="color: #4ade80;">vpn_key</span>
+          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
+            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">vpn_key</span>
             </div>
-            <div class="bento-feature-content">
-              <h4>Digital Key</h4>
-              <p>Enhance vehicle access and control via the mobile app, offering users a contactless, secure way to unlock and start their vehicles.</p>
-            </div>
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Digital Key</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Enhance vehicle access and control via the mobile app, offering users a contactless, secure way to unlock and start their vehicles.</p>
           </div>
         </div>
       </section>
@@ -193,75 +136,135 @@
         <h3>Research Approach</h3>
         <p>I conducted comprehensive research to understand how vehicle owners currently manage automotive services and what prevents them from using digital solutions:</p>
 
-        <ul>
-          <li><strong>User interviews:</strong> Spoke with 20 vehicle owners across different demographics and vehicle types</li>
-          <li><strong>Service provider interviews:</strong> Interviewed automotive service centers to understand operational constraints</li>
-          <li><strong>Competitive analysis:</strong> Evaluated existing solutions like Tesla app, Openbay, and YourMechanic</li>
-          <li><strong>Behavioral analysis:</strong> Studied how users currently schedule services and what friction points exist</li>
-        </ul>
+        <div class="research-cards-container" style="display: flex; align-items: center; gap: 16px; margin: 32px 0;">
+          <div class="research-card-item" style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px; flex: 1; opacity: 0; transform: translateX(-30px);">
+            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">person</span>
+            </div>
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">User interviews</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Spoke with 20 vehicle owners across different demographics and vehicle types</p>
+          </div>
+          <span class="research-card-item material-icons" style="color: #ccc; font-size: 32px; opacity: 0; transform: translateX(-30px);">arrow_forward</span>
+          <div class="research-card-item" style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px; flex: 1; opacity: 0; transform: translateX(-30px);">
+            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">business</span>
+            </div>
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Service provider interviews</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Interviewed automotive service centers to understand operational constraints</p>
+          </div>
+          <span class="research-card-item material-icons" style="color: #ccc; font-size: 32px; opacity: 0; transform: translateX(-30px);">arrow_forward</span>
+          <div class="research-card-item" style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px; flex: 1; opacity: 0; transform: translateX(-30px);">
+            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">analytics</span>
+            </div>
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Competitive analysis</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Evaluated existing solutions like Tesla app, Openbay, and YourMechanic</p>
+          </div>
+          <span class="research-card-item material-icons" style="color: #ccc; font-size: 32px; opacity: 0; transform: translateX(-30px);">arrow_forward</span>
+          <div class="research-card-item" style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px; flex: 1; opacity: 0; transform: translateX(-30px);">
+            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">insights</span>
+            </div>
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Behavioral analysis</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Studied how users currently schedule services and what friction points exist</p>
+          </div>
+        </div>
+
+        <script>
+        (function() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                entry.target.classList.add('animated');
+                const items = entry.target.querySelectorAll('.research-card-item');
+                items.forEach((item, index) => {
+                  setTimeout(() => {
+                    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                  }, index * 150);
+                });
+              }
+            });
+          }, { threshold: 0.2 });
+
+          const container = document.querySelector('.research-cards-container');
+          if (container) observer.observe(container);
+        })();
+        </script>
 
         <h3>Key Pain Points Discovered</h3>
 
-        <h4>1. Price Opacity Creates Distrust</h4>
-        <p>Hidden fees were the #1 complaint about traditional automotive service. Users wanted to see complete pricing before committing to a service appointment. Many avoided digital booking because they feared surprise charges.</p>
+        <div style="display: grid; grid-template-columns: 60% 40%; gap: 40px; align-items: center;">
+          <div>
+            <h4>1. Price Opacity Creates Distrust</h4>
+            <p>Hidden fees were the #1 complaint about traditional automotive service. Users wanted to see complete pricing before committing to a service appointment. Many avoided digital booking because they feared surprise charges.</p>
 
-        <h4>2. Scheduling Friction Leads to Delays</h4>
-        <p>Research revealed that 67% of users still preferred in-person scheduling—not because they wanted to visit in person, but because phone calls were frustrating and existing digital solutions were clunky. The average booking took 15 minutes across multiple phone calls and confirmation emails.</p>
+            <h4>2. Scheduling Friction Leads to Delays</h4>
+            <p>Research revealed that 67% of users still preferred in-person scheduling—not because they wanted to visit in person, but because phone calls were frustrating and existing digital solutions were clunky. The average booking took 15 minutes across multiple phone calls and confirmation emails.</p>
 
-        <h4>3. Physical Key Management is Inconvenient</h4>
-        <p>Users struggled with dropping off keys for service appointments, coordinating pickup times, and sharing access with family members. Service centers also cited key management as a significant operational burden.</p>
+            <h4>3. Physical Key Management is Inconvenient</h4>
+            <p>Users struggled with dropping off keys for service appointments, coordinating pickup times, and sharing access with family members. Service centers also cited key management as a significant operational burden.</p>
 
-        <h4>4. No Service History or Recommendations</h4>
-        <p>Vehicle owners wanted personalized service recommendations based on their mileage and time intervals, but this information was rarely available. They had to remember maintenance schedules manually or rely on reminder stickers.</p>
-
-        <div class="pie-chart-container">
-          <div class="pie-chart-wrapper">
-            <div class="pie-chart" data-values='[{"value": 67, "color": "#d84343"}, {"value": 22, "color": "#8b8b8b"}, {"value": 11, "color": "#c4c4c4"}]'>
-              <svg viewBox="0 0 320 320">
-                <!-- Pie chart will be rendered by JavaScript -->
-              </svg>
-            </div>
-            <div class="pie-chart-legend">
-              <div class="pie-chart-legend-item">
-                <div class="pie-chart-legend-dot light-gray"></div>
-                <span>Online</span>
-              </div>
-              <div class="pie-chart-legend-item">
-                <div class="pie-chart-legend-dot gray"></div>
-                <span>Over the phone</span>
-              </div>
-              <div class="pie-chart-legend-item">
-                <div class="pie-chart-legend-dot red"></div>
-                <span>In-person</span>
-              </div>
-            </div>
+            <h4>4. No Service History or Recommendations</h4>
+            <p>Vehicle owners wanted personalized service recommendations based on their mileage and time intervals, but this information was rarely available. They had to remember maintenance schedules manually or rely on reminder stickers.</p>
           </div>
-          <p class="pie-chart-caption">Research showed 67% of users preferred in-person service scheduling, revealing opportunity for digital convenience</p>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="Koto/User pain point.png" alt="User pain points visualization" style="width: 50%; height: auto; border-radius: 16px;">
+          </div>
         </div>
 
-        <div class="pie-chart-container">
-          <div class="pie-chart-wrapper">
-            <div class="pie-chart" data-values='[{"value": 54, "color": "#d84343"}, {"value": 46, "color": "#c4c4c4"}]'>
-              <svg viewBox="0 0 320 320">
-                <!-- Pie chart will be rendered by JavaScript -->
-              </svg>
-            </div>
-            <div class="pie-chart-legend">
-              <div class="pie-chart-legend-item">
-                <div class="pie-chart-legend-dot light-gray"></div>
-                <span>Online</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 120px; margin: 48px 0;">
+          <div class="pie-chart-container" style="margin: 0;">
+            <div class="pie-chart-wrapper">
+              <div class="pie-chart" data-values='[{"value": 67, "color": "#d84343"}, {"value": 22, "color": "#8b8b8b"}, {"value": 11, "color": "#c4c4c4"}]'>
+                <svg viewBox="0 0 320 320">
+                  <!-- Pie chart will be rendered by JavaScript -->
+                </svg>
               </div>
-              <div class="pie-chart-legend-item">
-                <div class="pie-chart-legend-dot red"></div>
-                <span>Staff</span>
+              <div class="pie-chart-legend">
+                <div class="pie-chart-legend-item">
+                  <div class="pie-chart-legend-dot light-gray"></div>
+                  <span>Online</span>
+                </div>
+                <div class="pie-chart-legend-item">
+                  <div class="pie-chart-legend-dot gray"></div>
+                  <span>Over the phone</span>
+                </div>
+                <div class="pie-chart-legend-item">
+                  <div class="pie-chart-legend-dot red"></div>
+                  <span>In-person</span>
+                </div>
               </div>
             </div>
+            <p class="pie-chart-caption">Research showed 67% of users preferred in-person service scheduling, revealing opportunity for digital convenience</p>
           </div>
-          <p class="pie-chart-caption">Nearly even split between staff and online preferences suggested need for hybrid approach</p>
+
+          <div class="pie-chart-container" style="margin: 0;">
+            <div class="pie-chart-wrapper">
+              <div class="pie-chart" data-values='[{"value": 54, "color": "#d84343"}, {"value": 46, "color": "#c4c4c4"}]'>
+                <svg viewBox="0 0 320 320">
+                  <!-- Pie chart will be rendered by JavaScript -->
+                </svg>
+              </div>
+              <div class="pie-chart-legend">
+                <div class="pie-chart-legend-item">
+                  <div class="pie-chart-legend-dot light-gray"></div>
+                  <span>Online</span>
+                </div>
+                <div class="pie-chart-legend-item">
+                  <div class="pie-chart-legend-dot red"></div>
+                  <span>Staff</span>
+                </div>
+              </div>
+            </div>
+            <p class="pie-chart-caption">Nearly even split between staff and online preferences suggested need for hybrid approach</p>
+          </div>
         </div>
 
-        <h3>Design Opportunity</h3>
-        <p>The research revealed a clear opportunity: users wanted digital convenience but existing solutions created more friction than they solved. By addressing price transparency, streamlining booking, and integrating digital key technology, we could create a service experience that actually reduced effort rather than adding complexity.</p>
+        <div style="background: rgba(99, 102, 241, 0.05); padding: 32px; border-radius: 12px; border: 2px solid rgba(99, 102, 241, 0.3); margin: 40px 0;">
+          <p style="margin: 0; font-size: 16px; line-height: 1.6;"><strong style="color: #4F46E5;">Design Opportunity:</strong> The research revealed a clear opportunity: users wanted digital convenience but existing solutions created more friction than they solved. By addressing price transparency, streamlining booking, and integrating digital key technology, we could create a service experience that actually reduced effort rather than adding complexity.</p>
+        </div>
       </section>
 
       <section class="case-study-section">
@@ -286,57 +289,129 @@
           </div>
         </div>
 
-        <div class="case-study-image">
-          <img src="koto/koto-wireframe-sketches.png" alt="Hand-drawn wireframe sketches in notebook showing early interface explorations">
-          <div class="case-study-image-caption">
-            Early wireframe sketches exploring layout options and information hierarchy for key screens
+        <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center;">
+          <div class="case-study-image">
+            <img src="koto/koto-wireframe-sketches.png" alt="Hand-drawn wireframe sketches in notebook showing early interface explorations" style="width: 100%;">
+          </div>
+          <div style="display: flex; justify-content: flex-start; align-items: center;">
+            <div class="case-study-image-caption" style="text-align: left; transform: translateY(40px);">
+              Early wireframe sketches exploring layout options<br>and information hierarchy for key screens
+            </div>
           </div>
         </div>
 
-        <h3>Visual Design & Prototyping</h3>
-        <p>I established a design system optimized for automotive context:</p>
+        <h3>Low-Fidelity Wireframes</h3>
+        <p>Started with wireframes to map out the complete service booking flow, from vehicle information entry to appointment confirmation. This phase focused on establishing information architecture and user flow logic.</p>
 
-        <ul>
-          <li><strong>Dark theme interface:</strong> Matches automotive interior lighting and reduces glare for in-car usage</li>
-          <li><strong>High-contrast UI:</strong> Ensures readability in bright outdoor environments (parking lots)</li>
-          <li><strong>Large touch targets:</strong> Optimized for one-handed operation and winter glove usage</li>
-          <li><strong>Component library:</strong> Reusable patterns for service cards, appointment slots, and booking flows</li>
-        </ul>
+        <div class="case-study-image">
+          <img src="Koto/LoFi Wireframes.png" alt="Low-fidelity wireframes showing booking flow" style="width: 100%; margin-bottom: 80px;">
+        </div>
 
-        <h3>Testing & Iteration</h3>
-        <p>Rigorous testing ensured both features met user needs and technical requirements:</p>
+        <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center;">
+          <div style="display: flex; flex-direction: column; justify-content: center; transform: translateY(-140px);">
+            <h3>Visual Design Explorations</h3>
+            <p>Explored different visual directions for the home screen and service discovery interface. Tested multiple layout approaches to find the optimal balance between service promotion and user navigation.</p>
+          </div>
+          <div class="case-study-image" style="display: flex; justify-content: center; align-items: center;">
+            <img src="Koto/Design Explorations.png" alt="Design exploration variations" style="width: 80%;">
+          </div>
+        </div>
 
-        <ul>
-          <li><strong>Usability testing:</strong> Conducted moderated sessions with 12 participants across age groups</li>
-          <li><strong>Field testing:</strong> Digital key functionality tested in real-world scenarios (parking lots, valets, service centers)</li>
-          <li><strong>A/B testing:</strong> Tested checkout flow variations to optimize conversion rates</li>
-          <li><strong>Beta program:</strong> Ran 8-week beta with 100 users and 5 partnered service centers</li>
-        </ul>
+        <h3>Brand Identity Development</h3>
 
-        <h4>Key Iterations:</h4>
-        <ul>
-          <li>Simplified onboarding survey from 8 questions to 4 after observing drop-off</li>
-          <li>Added price comparison feature after beta users requested ability to evaluate service costs</li>
-          <li>Implemented proximity-based auto-unlock after field testing showed tap-to-unlock was too slow</li>
-          <li>Redesigned service cards to emphasize availability and pricing (initially too text-heavy)</li>
-        </ul>
+        <div style="width: 80%; margin-bottom: 80px;">
+          <h4>Mood Board</h4>
+          <p>Established the visual direction drawing inspiration from luxury, sophistication, and dynamic automotive design. The mood board guided decisions around elegance, minimalism, and creative presentation.</p>
 
-        <div class="image-grid">
           <div class="case-study-image">
-            <div class="case-study-image-placeholder">
-              [Image: Before/after comparison of onboarding survey showing reduction from 8 to 4 questions]
-            </div>
-            <div class="case-study-image-caption">
-              Simplified onboarding increased completion rate while maintaining data quality
-            </div>
+            <img src="Koto/Mood Board.png" alt="Mood board showing luxury, sophisticated, and dynamic themes" style="width: 100%;">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center; margin-bottom: 80px;">
+          <div>
+            <h4>Logo Exploration</h4>
+            <p>Developed multiple logo variations incorporating Japanese design elements. The final mark features a torii gate-inspired symbol integrated with the wordmark, representing connection and access—core themes of the platform.</p>
           </div>
           <div class="case-study-image">
-            <div class="case-study-image-placeholder">
-              [Image: Service card evolution showing initial text-heavy design vs. final visual-first layout]
+            <img src="Koto/Logo Exploration.png" alt="Logo exploration showing various iterations" style="width: 100%;">
+          </div>
+        </div>
+
+        <h4>Typography System</h4>
+        <p>Established a visual type scale with clear hierarchy across four sizes (Large, Medium, Regular, Small) ensuring readability and consistency across all touchpoints.</p>
+
+        <div class="case-study-image">
+          <img src="Koto/Typography Paring.png" alt="Typography system showing type scale" style="width: 100%;">
+        </div>
+
+        <h3>Component Library</h3>
+        <p>Built a comprehensive design system with reusable components including navigation bars, pricing cards, calendars, booking forms, and profile elements. This ensured consistency across the platform while enabling rapid iteration.</p>
+
+        <div class="case-study-image">
+          <img src="Koto/Components.png" alt="Component library showing UI elements" style="width: 100%;">
+        </div>
+      </section>
+
+      <section class="case-study-section">
+        <div class="section-label">Final Design</div>
+        <h2 class="section-title">Integrated Automotive Experience</h2>
+        <div class="section-divider"></div>
+
+        <h3>Secure Authentication</h3>
+        <p>Optimized login experience balances security with convenience for quick access to the platform.</p>
+
+        <div class="image-grid" style="align-items: center; padding: 40px 40px 40px 40px; height: 580px;">
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; height: 100%;">
+            <img src="Koto/Log In.png" alt="Login screen" style="width: 40%; height: auto; object-fit: contain;">
+          </div>
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 2; height: 100%; padding: 4px;">
+            <div style="width: calc(100% + 2px); height: calc(100% + 2px); overflow: hidden; border-radius: 50px; aspect-ratio: 1/1;">
+              <img src="Koto/Hand_Black_01.png" alt="Biometric authentication" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div class="case-study-image-caption">
-              Redesigned cards emphasized pricing and availability based on user feedback
-            </div>
+          </div>
+        </div>
+
+        <h3>Unified Dashboard</h3>
+        <p>The home screen brings together all essential features in a cohesive interface, providing quick access to services, appointments, and vehicle management.</p>
+
+        <div class="case-study-image">
+          <img src="Koto/Service Booking2.png" alt="Koto service booking screens showing categories and booking flow" style="width: 100%;">
+        </div>
+
+        <h3>Service Booking</h3>
+        <p>Streamlined booking experience with transparent pricing and instant availability information.</p>
+
+        <div class="image-grid" style="align-items: center;">
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="Koto/iPhone 12 Pro.png" alt="iPhone showing Koto app interface" style="width: 40%;">
+          </div>
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="Koto/Service Booking.png" alt="Service booking flow" style="width: 100%;">
+          </div>
+        </div>
+
+        <h3>Appointment Management</h3>
+        <p>Comprehensive appointment tracking with real-time updates reduces friction in scheduling and managing service appointments.</p>
+
+        <div class="image-grid" style="align-items: center;">
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="Koto/Appointments.png" alt="Appointments dashboard" style="width: 40%;">
+          </div>
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="Koto/Appointment details & tracking.png" alt="Appointment tracking" style="width: 100%;">
+          </div>
+        </div>
+
+        <h3>Digital Key Technology</h3>
+        <p>Secure, contactless digital key functionality enables modern vehicle access and sharing, eliminating the limitations of physical keys.</p>
+
+        <div class="image-grid" style="align-items: center;">
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="Koto/Digital Key.png" alt="Digital key interface" style="width: 40%;">
+          </div>
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="Koto/Add new car to digital key.png" alt="Add vehicle to digital key" style="width: 100%;">
           </div>
         </div>
       </section>
@@ -348,123 +423,108 @@
 
         <div class="results-grid">
           <div class="result-card">
-            <div class="result-metric">45%</div>
+            <div class="result-metric" data-target="45" data-suffix="%">0%</div>
             <div class="result-label">Increase in Service Bookings</div>
             <p>Compared to pre-app baseline of phone and walk-in bookings, demonstrating reduced friction in scheduling</p>
           </div>
 
           <div class="result-card">
-            <div class="result-metric">82%</div>
+            <div class="result-metric" data-target="82" data-suffix="%">0%</div>
             <div class="result-label">Digital Key Adoption</div>
             <p>Among users who completed at least one service appointment, showing strong trust in contactless technology</p>
           </div>
 
           <div class="result-card">
-            <div class="result-metric">3.5x</div>
+            <div class="result-metric" data-target="3.5" data-suffix="x">0x</div>
             <div class="result-label">Faster Checkout</div>
             <p>Average booking completion time reduced from 15 minutes (phone) to under 5 minutes (app)</p>
           </div>
 
           <div class="result-card">
-            <div class="result-metric">4.7/5</div>
+            <div class="result-metric" data-target="4.7" data-suffix="/5">0/5</div>
             <div class="result-label">App Store Rating</div>
             <p>Highly rated with consistent praise for convenience and digital key reliability</p>
           </div>
 
           <div class="result-card">
-            <div class="result-metric">68%</div>
+            <div class="result-metric" data-target="68" data-suffix="%">0%</div>
             <div class="result-label">Repeat Service Rate</div>
             <p>Users who booked once returned for additional services within 6 months, indicating strong satisfaction</p>
           </div>
 
           <div class="result-card">
-            <div class="result-metric">$125</div>
+            <div class="result-metric" data-target="125" data-prefix="$">$0</div>
             <div class="result-label">Average Order Value</div>
             <p>35% higher than traditional phone bookings due to service bundling and product cross-selling</p>
           </div>
         </div>
 
-        <div class="bento-impact-grid">
-          <div class="bento-impact-large">
-            <div class="bento-impact-metric">3.5x</div>
-            <div class="bento-impact-label">Faster checkout experience</div>
-            <div class="bento-impact-description">Average booking completion time reduced from 15 minutes via phone to under 5 minutes in the app, removing friction from service scheduling.</div>
-          </div>
-          <div class="bento-impact-small">
-            <div class="bento-impact-metric">82%</div>
-            <div class="bento-impact-label">Digital key adoption</div>
-            <div class="bento-impact-description">Among users who completed at least one service appointment.</div>
-          </div>
-        </div>
+        <script>
+        (function() {
+          function animateCounter(element, target, duration = 2000) {
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
 
-        <div class="bento-grid">
-          <div class="bento-item bento-medium">
-            <div class="case-study-image-placeholder">
-              [Image: Line graph showing 45% increase in service bookings over 6-month period]
-            </div>
-            <div class="case-study-image-caption">
-              Service bookings grew steadily as users discovered the convenience of digital scheduling
-            </div>
-          </div>
-          <div class="bento-item bento-medium">
-            <div class="case-study-image-placeholder">
-              [Image: Chart comparing booking completion times: 15 min (phone) vs 5 min (app)]
-            </div>
-            <div class="case-study-image-caption">
-              Streamlined checkout delivered 3.5x faster booking experience
-            </div>
-          </div>
-        </div>
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+
+              const displayValue = target % 1 === 0 ? Math.floor(current) : current.toFixed(1);
+              element.textContent = prefix + displayValue + suffix;
+            }, 16);
+          }
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                entry.target.classList.add('animated');
+
+                const metrics = entry.target.querySelectorAll('.result-metric[data-target]');
+                metrics.forEach((metric, index) => {
+                  setTimeout(() => {
+                    const target = parseFloat(metric.getAttribute('data-target'));
+                    animateCounter(metric, target);
+                  }, index * 100);
+                });
+              }
+            });
+          }, { threshold: 0.3 });
+
+          const resultsGrid = document.querySelector('.results-grid');
+          if (resultsGrid) observer.observe(resultsGrid);
+        })();
+        </script>
       </section>
 
       <section class="case-study-section">
-        <div class="section-label">Key Learnings</div>
-        <h2 class="section-title">What I Learned</h2>
+        <div class="section-label">Reflection</div>
+        <h2 class="section-title">Key Takeaways</h2>
         <div class="section-divider"></div>
 
-        <div class="learning-item">
-          <h3>Hybrid Architecture Enables Best of Both Worlds</h3>
-          <p>The decision to use native app for core features (digital key, notifications) while embedding web views for e-commerce provided optimal performance and development flexibility. Native features felt fast and integrated, while web content allowed rapid iteration without app store submission delays. This architectural choice reduced development time by 40% compared to pure native approach.</p>
+        <p>Koto successfully unified e-commerce and digital key technology into a seamless automotive platform. The results—45% increase in bookings, 82% digital key adoption, and 3.5x faster checkout—validate that reducing friction drives adoption.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0;">
+          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Transparency Drives Trust</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Clear pricing was the most impactful factor in service bookings. Similarly, explaining digital key security increased adoption by 35%. In traditionally opaque industries, transparency builds competitive advantage.</p>
+          </div>
+
+          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Integration Creates Value</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Users engaging with both features had 3x higher retention. Automatic key sharing during service bookings created a cohesive experience that felt seamless rather than fragmented.</p>
+          </div>
+
+          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
+            <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Context Shapes Design</h4>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Automotive usage demands specific considerations—high contrast for outdoor visibility, large touch targets for gloves, and proximity-based unlock. Understanding the physical environment is essential.</p>
+          </div>
         </div>
-
-        <div class="learning-item">
-          <h3>Transparency Builds Trust in Automotive Services</h3>
-          <p>Clear, upfront pricing was the single most impactful factor in driving service bookings. Users consistently mentioned price transparency as their favorite feature. This taught me that in traditionally opaque industries (automotive, healthcare, legal), showing pricing before commitment can be a massive competitive advantage.</p>
-        </div>
-
-        <div class="learning-item">
-          <h3>Digital Key Security Must Be Visible</h3>
-          <p>Initial designs treated digital key functionality as "just working" without explaining security measures. User testing revealed significant hesitation to use the feature without understanding encryption, authentication, and backup procedures. Adding a one-time security explainer during first key setup increased adoption by 35%. The lesson: for trust-critical features, transparency about how security works is essential.</p>
-        </div>
-
-        <div class="learning-item">
-          <h3>Service Integration Creates Sticky Experiences</h3>
-          <p>Users who utilized both the shop and digital key features had 3x higher retention than those using only one feature. The integration between booking a service and automatically granting digital key access to the service center created a seamless experience that felt magical. This validated that connected ecosystems create more value than isolated features.</p>
-        </div>
-
-        <div class="learning-item">
-          <h3>Automotive Context Requires Design Considerations</h3>
-          <p>Designing for in-car and parking lot usage required different thinking than typical mobile apps. High-contrast UI for outdoor visibility, large touch targets for winter gloves, and proximity-based unlock for hands full of groceries were all contextual considerations that emerged from field testing. This taught me to always consider the physical environment where the product will be used.</p>
-        </div>
-      </section>
-
-      <section class="case-study-section">
-        <h2>Reflection</h2>
-        <p>Koto represents a successful integration of e-commerce and connected car technology into a unified automotive ownership platform. By focusing on real user pain points—opaque pricing, inconvenient scheduling, physical key management—we created an experience that meaningfully improved how people interact with automotive services.</p>
-
-        <p>The success metrics—45% increase in bookings, 82% digital key adoption, 3.5x faster checkout—validate that when you reduce friction in traditionally cumbersome processes (service scheduling, vehicle access), users eagerly adopt digital solutions.</p>
-
-        <p>What I'm most proud of is the seamless integration between e-commerce and digital key functionality. Rather than feeling like two separate features, they work together cohesively—booking a service automatically handles key sharing, appointments appear in the calendar alongside key access permissions, and service history informs future recommendations.</p>
-
-        <h3>Future Opportunities</h3>
-        <p>If I were to continue evolving Koto, I'd focus on three key areas:</p>
-
-        <ul>
-          <li><strong>Predictive maintenance alerts:</strong> Leverage vehicle diagnostic data to proactively recommend services before issues become critical</li>
-          <li><strong>Service provider marketplace:</strong> Open the platform to third-party service providers with quality ratings and competitive bidding</li>
-          <li><strong>Fleet management features:</strong> Extend the platform to support multi-vehicle households and small business fleets</li>
-          <li><strong>Insurance integration:</strong> Connect service history with insurance providers to offer usage-based discounts for well-maintained vehicles</li>
-        </ul>
       </section>
 
     </div>

@@ -7,18 +7,22 @@
   <meta name="description" content="Designing an intuitive self-ordering kiosk that reduced order time by 30% and increased kiosk adoption by 20%">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=57">
   <link rel="stylesheet" href="hero-section.css">
   <link rel="stylesheet" href="skytab-kiosk/skytab-kiosk.css">
   <script src="navigation.js" defer></script>
+  <script src="chat-widget.js" defer></script>
 </head>
 <body class="case-study-page">
 
   <!-- Hero Wrapper - Contains nav and hero with shared gradient background -->
   <div class="hero-wrapper">
-    <nav class="navigation">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
+      <div data-us-project="JI9DJn6PAN07InxEepgS" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
+    </div>
+    <nav class="navigation" style="position: relative; z-index: 1;">
       <div class="nav-container">
         <div class="nav-logo">Ricky Liu</div>
         <div class="nav-links">
@@ -30,7 +34,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" style="position: relative; z-index: 1;">
       <div class="hero-content-wrapper">
         <div class="hero-main">
           <div class="hero-text">
@@ -341,6 +345,10 @@
           <p><strong>With Product Management:</strong> Aligned on MVP scope, prioritized features, defined success metrics</p>
           <p><strong>With Engineering:</strong> Created detailed specs, documented edge cases, participated in sprint planning, conducted QA reviews</p>
           <p><strong>With Hardware Team:</strong> Ensured design worked within hardware constraints, tested on actual kiosk hardware</p>
+
+          <div class="case-study-image" style="margin-top: var(--spacing-8);">
+            <img src="skytab-kiosk/Mockup1.png" alt="Kiosk hardware testing mockup" style="width: 100%; height: auto; border-radius: 12px;">
+          </div>
         </section>
 
         <section class="case-study-section">
@@ -448,86 +456,6 @@
           </div>
         </section>
 
-        <section class="case-study-section">
-          <div class="section-label">Key Features</div>
-          <h2 class="section-title">Designed for Speed and Confidence</h2>
-          <div class="section-divider"></div>
-
-          <div class="feature-cards-grid">
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <div class="feature-card-icon">
-                  <span class="material-icons">badge</span>
-                </div>
-              </div>
-              <div class="feature-card-content">
-                <h4 class="feature-card-title">Loyalty Auto-Detect</h4>
-                <p class="feature-card-description">Phone lookup instantly personalizes experience</p>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <div class="feature-card-icon">
-                  <span class="material-icons">restaurant_menu</span>
-                </div>
-              </div>
-              <div class="feature-card-content">
-                <h4 class="feature-card-title">Visual Menu</h4>
-                <p class="feature-card-description">Food photos + horizontal categories = faster browsing</p>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <div class="feature-card-icon">
-                  <span class="material-icons">tune</span>
-                </div>
-              </div>
-              <div class="feature-card-content">
-                <h4 class="feature-card-title">Modal Customization</h4>
-                <p class="feature-card-description">One item focus + live price = clear modifications</p>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <div class="feature-card-icon">
-                  <span class="material-icons">shopping_cart</span>
-                </div>
-              </div>
-              <div class="feature-card-content">
-                <h4 class="feature-card-title">Editable Cart</h4>
-                <p class="feature-card-description">Edit/remove items + auto-applied loyalty offers</p>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <div class="feature-card-icon">
-                  <span class="material-icons">payments</span>
-                </div>
-              </div>
-              <div class="feature-card-content">
-                <h4 class="feature-card-title">Payment Flex</h4>
-                <p class="feature-card-description">Pay at kiosk or counter—customer's choice</p>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <div class="feature-card-icon">
-                  <span class="material-icons">check_circle</span>
-                </div>
-              </div>
-              <div class="feature-card-content">
-                <h4 class="feature-card-title">Clear Confirmation</h4>
-                <p class="feature-card-description">Order # + wait time + receipt options</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
       <section class="case-study-section">
           <div class="section-label">Impact & Results</div>
           <h2 class="section-title">4.5min → 3.1min Orders</h2>
@@ -535,16 +463,92 @@
 
           <div class="bento-grid">
             <div class="bento-item bento-large">
-              <div class="case-study-image-placeholder">
-                [Image: Data viz showing order time reduction from 4.5min to 3.1min across peak hours]
+              <div style="background: white; border-radius: 24px; padding: var(--spacing-10); height: 100%; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-8);">
+                  <div>
+                    <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-lg); font-weight: 600; color: #1a1a1a;">Order Time Reduction</h4>
+                    <p style="font-size: var(--font-size-sm); color: #737373;">Average time per order</p>
+                  </div>
+                </div>
+
+                <!-- Time comparison circles -->
+                <div style="display: flex; gap: var(--spacing-8); align-items: center; justify-content: center; margin: var(--spacing-10) 0;">
+                  <div style="text-align: center;">
+                    <div style="position: relative; width: 140px; height: 140px; margin: 0 auto var(--spacing-4);">
+                      <div style="position: absolute; inset: 0; background: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: scaleIn 0.6s ease-out;">
+                        <div style="font-size: 2.25rem; font-weight: 700; color: #1a1a1a;">4.5</div>
+                      </div>
+                    </div>
+                    <div style="font-size: var(--font-size-sm); color: #737373; font-weight: 500;">Before</div>
+                    <div style="font-size: var(--font-size-xs); color: #a3a3a3;">minutes</div>
+                  </div>
+
+                  <div style="font-size: 1.5rem; color: #d4d4d4;">→</div>
+
+                  <div style="text-align: center;">
+                    <div style="position: relative; width: 140px; height: 140px; margin: 0 auto var(--spacing-4);">
+                      <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #FDB913 0%, #F8A900 50%, #FF8C00 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: scaleIn 0.6s ease-out 0.3s backwards;">
+                        <div style="font-size: 2.25rem; font-weight: 700; color: white;">3.1</div>
+                      </div>
+                    </div>
+                    <div style="font-size: var(--font-size-sm); color: #737373; font-weight: 500;">After</div>
+                    <div style="font-size: var(--font-size-xs); color: #a3a3a3;">minutes</div>
+                  </div>
+                </div>
+
+                <!-- Throughput metric -->
+                <div style="margin-top: var(--spacing-10); padding-top: var(--spacing-6); border-top: 1px solid #F5F5F5;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--font-size-sm); color: #737373; font-weight: 500;">Peak-hour throughput</span>
+                    <div style="display: flex; align-items: baseline; gap: 4px; opacity: 0; animation: fadeIn 0.5s ease-out 1s forwards;">
+                      <span style="font-size: var(--font-size-2xl); font-weight: 700; color: #F8A900;">+35%</span>
+                      <span style="font-size: var(--font-size-xs); color: #737373;">increase</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="case-study-image-caption">
                 30% faster orders increased peak-hour throughput by 35%
               </div>
             </div>
+
             <div class="bento-item bento-small">
-              <div class="case-study-image-placeholder">
-                [Image: Adoption rate chart showing 42% → 62% kiosk usage]
+              <div style="background: white; border-radius: 24px; padding: var(--spacing-8); height: 100%; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column;">
+                <div style="margin-bottom: var(--spacing-6);">
+                  <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">Kiosk Adoption</h4>
+                  <p style="font-size: var(--font-size-sm); color: #737373;">Usage rate increase</p>
+                </div>
+
+                <!-- Circular gauge -->
+                <div style="position: relative; width: 180px; height: 180px; margin: var(--spacing-6) auto;">
+                  <svg viewBox="0 0 200 200" style="transform: rotate(-90deg);">
+                    <defs>
+                      <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FDB913;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#F8A900;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+                      </linearGradient>
+                    </defs>
+                    <!-- Background track -->
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="#F5F5F5" stroke-width="20"/>
+                    <!-- Progress arc (62%) -->
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#gaugeGradient)" stroke-width="20" stroke-dasharray="534" stroke-dashoffset="203" stroke-linecap="round" style="animation: drawArc 1.2s ease-out 0.6s backwards;"/>
+                  </svg>
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; opacity: 0; animation: fadeIn 0.5s ease-out 1.4s forwards;">62%</div>
+                    <div style="font-size: var(--font-size-xs); color: #a3a3a3; margin-top: var(--spacing-2); opacity: 0; animation: fadeIn 0.5s ease-out 1.6s forwards;">adoption rate</div>
+                  </div>
+                </div>
+
+                <!-- Metrics footer -->
+                <div style="margin-top: auto; padding-top: var(--spacing-6); border-top: 1px solid #F5F5F5;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--font-size-sm); color: #737373;">42% → 62%</span>
+                    <div style="display: inline-flex; align-items: center; gap: var(--spacing-2); padding: 6px 12px; background: rgba(248, 169, 0, 0.1); border-radius: 16px;">
+                      <span style="color: #F8A900; font-size: var(--font-size-sm); font-weight: 600;">+20%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="case-study-image-caption">
                 Payment flex drove 20% adoption increase
@@ -552,23 +556,139 @@
             </div>
           </div>
 
+          <style>
+            @keyframes scaleIn {
+              from {
+                transform: scale(0.8);
+                opacity: 0;
+              }
+              to {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+
+            @keyframes drawArc {
+              from {
+                stroke-dashoffset: 534;
+              }
+              to {
+                stroke-dashoffset: 203;
+              }
+            }
+          </style>
+
           <h3>Key Results</h3>
 
-          <ul>
-            <li><strong>30% faster orders:</strong> 4.5min → 3.1min average order time freed staff for food prep</li>
-            <li><strong>20% higher adoption:</strong> Dual payment options (kiosk or counter) removed friction—42% → 62% usage</li>
-            <li><strong>15% fewer support tickets:</strong> Clear error handling + timeout warnings reduced user confusion</li>
-            <li><strong>MVP delivered on schedule:</strong> Rapid go-to-market positioned SkyTab competitively</li>
-          </ul>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-6); margin: var(--spacing-8) 0;">
 
-          <div class="case-study-image">
-            <div class="case-study-image-placeholder">
-              [Image: Before/after comparison showing long counter lines vs. distributed kiosk + counter traffic]
+            <!-- Chart 1: Order Time Reduction -->
+            <div style="background: white; border-radius: 16px; padding: var(--spacing-6); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+              <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">30% Faster</h4>
+              <p style="font-size: var(--font-size-sm); color: #737373; margin-bottom: var(--spacing-4);">Order time</p>
+
+              <div style="display: flex; align-items: flex-end; gap: var(--spacing-3); height: 120px; margin: var(--spacing-4) 0;">
+                <div style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                  <div style="background: #F5F5F5; height: 100%; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; animation: slideUp 1s ease-out;">
+                    <span style="color: #1a1a1a; font-weight: 700; font-size: 1.25rem;">4.5</span>
+                  </div>
+                  <p style="margin-top: var(--spacing-2); font-size: 10px; color: #a3a3a3; text-align: center;">Before</p>
+                </div>
+                <div style="flex: 1; height: 68.9%; display: flex; flex-direction: column; justify-content: flex-end;">
+                  <div style="background: linear-gradient(135deg, #FDB913 0%, #F8A900 50%, #FF8C00 100%); height: 100%; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; animation: slideUp 1s ease-out 0.3s backwards;">
+                    <span style="color: white; font-weight: 700; font-size: 1.25rem;">3.1</span>
+                  </div>
+                  <p style="margin-top: var(--spacing-2); font-size: 10px; color: #a3a3a3; text-align: center;">After</p>
+                </div>
+              </div>
             </div>
-            <div class="case-study-image-caption">
-              Kiosk adoption redistributed traffic and eliminated peak-hour bottlenecks
+
+            <!-- Chart 2: Adoption Rate -->
+            <div style="background: white; border-radius: 16px; padding: var(--spacing-6); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+              <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">20% Higher</h4>
+              <p style="font-size: var(--font-size-sm); color: #737373; margin-bottom: var(--spacing-4);">Adoption</p>
+
+              <div style="display: flex; align-items: flex-end; gap: var(--spacing-3); height: 120px; margin: var(--spacing-4) 0;">
+                <div style="flex: 1; height: 67.7%; display: flex; flex-direction: column; justify-content: flex-end;">
+                  <div style="background: #F5F5F5; height: 100%; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; animation: slideUp 1s ease-out 0.6s backwards;">
+                    <span style="color: #1a1a1a; font-weight: 700; font-size: 1.25rem;">42%</span>
+                  </div>
+                  <p style="margin-top: var(--spacing-2); font-size: 10px; color: #a3a3a3; text-align: center;">Before</p>
+                </div>
+                <div style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                  <div style="background: linear-gradient(135deg, #FDB913 0%, #F8A900 50%, #FF8C00 100%); height: 100%; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; animation: slideUp 1s ease-out 0.9s backwards;">
+                    <span style="color: white; font-weight: 700; font-size: 1.25rem;">62%</span>
+                  </div>
+                  <p style="margin-top: var(--spacing-2); font-size: 10px; color: #a3a3a3; text-align: center;">After</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Chart 3: Support Tickets -->
+            <div style="background: white; border-radius: 16px; padding: var(--spacing-6); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+              <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">15% Fewer</h4>
+              <p style="font-size: var(--font-size-sm); color: #737373; margin-bottom: var(--spacing-4);">Support tickets</p>
+
+              <div style="position: relative; height: 80px; margin: var(--spacing-4) 0; display: flex; align-items: center; justify-content: center;">
+                <div style="position: relative; width: 100%; height: 60px; background: #F5F5F5; border-radius: 12px; overflow: hidden;">
+                  <div style="position: absolute; top: 0; left: 0; width: 85%; height: 100%; background: linear-gradient(135deg, #FDB913 0%, #F8A900 50%, #FF8C00 100%); border-radius: 12px; animation: fillRight85 1.2s ease-out 1.2s backwards;"></div>
+                  <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2;">
+                    <span style="font-weight: 700; font-size: 1.25rem; color: #1a1a1a; opacity: 0; animation: fadeIn 0.5s ease-out 1.8s forwards;">-15%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="text-align: center; font-size: 10px; color: #a3a3a3; margin-top: var(--spacing-3);">
+                <span style="color: #F8A900; font-weight: 600;">85% resolved</span>
+              </div>
+            </div>
+
+            <!-- Chart 4: MVP Delivery -->
+            <div style="background: white; border-radius: 16px; padding: var(--spacing-6); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+              <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">On Schedule</h4>
+              <p style="font-size: var(--font-size-sm); color: #737373; margin-bottom: var(--spacing-4);">MVP delivery</p>
+
+              <div style="position: relative; width: 100px; height: 100px; margin: var(--spacing-3) 0;">
+                <svg viewBox="0 0 200 200" style="transform: rotate(-90deg);">
+                  <defs>
+                    <linearGradient id="mvpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#FDB913;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#F8A900;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="100" cy="100" r="85" fill="none" stroke="#F5F5F5" stroke-width="16"/>
+                  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#mvpGradient)" stroke-width="16" stroke-dasharray="534" stroke-dashoffset="0" stroke-linecap="round" style="animation: drawCircle100 1.5s ease-out 2.1s backwards;"/>
+                </svg>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                  <div style="color: #1a1a1a; font-weight: 700; font-size: 1.25rem;">100%</div>
+                  <div style="color: #a3a3a3; font-size: 10px; margin-top: 2px;">Done</div>
+                </div>
+              </div>
+            </div>
+
           </div>
+
+          <style>
+            @keyframes fillRight85 {
+              from {
+                width: 0;
+              }
+              to {
+                width: 85%;
+              }
+            }
+
+            @keyframes drawCircle100 {
+              from {
+                stroke-dashoffset: 534;
+              }
+              to {
+                stroke-dashoffset: 0;
+              }
+            }
+          </style>
+
         </section>
 
       <section class="case-study-section">

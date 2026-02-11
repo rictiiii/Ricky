@@ -51,6 +51,12 @@
   z-index: 1;
 }
 
+/* Override feature card backgrounds to be solid white */
+.case-study-section:not(.section-accent) .feature-card {
+  background: white;
+  border: 1px solid #E5E5E5;
+}
+
 /* Override feature card hover border */
 .case-study-section:not(.section-accent) .feature-card:hover {
   border-color: rgba(248, 169, 0, 0.25);
@@ -92,13 +98,14 @@
 
 /* Override icon container and Material Icons color */
 .case-study-section:not(.section-accent) .feature-card-icon {
-  background: #F8A900;
+  background: rgba(248, 169, 0, 0.15);
   width: 56px;
   height: 56px;
+  border-radius: 50%;
 }
 
 .case-study-section:not(.section-accent) .feature-card-icon .material-icons {
-  color: white;
+  color: #F8A900;
   font-size: 24px;
 }
 
@@ -143,11 +150,12 @@
 
 /* Bento grid feature icons */
 .bento-feature .feature-card-icon {
-  background: #F8A900;
+  background: rgba(248, 169, 0, 0.15);
+  border-radius: 50%;
 }
 
 .bento-feature .feature-card-icon .material-icons {
-  color: white;
+  color: #F8A900;
 }
 
 /* Cards on orange gradient backgrounds */
@@ -164,23 +172,25 @@
 }
 
 .case-study-section.section-accent .feature-card-icon .material-icons {
-  color: white !important;
+  color: #F8A900 !important;
 }
 
 .case-study-section.section-accent .bento-feature .material-icons {
-  color: white !important;
+  color: #F8A900 !important;
 }
 
 .case-study-section.section-accent .feature-card-icon {
-  background: #F8A900 !important;
+  background: rgba(248, 169, 0, 0.15) !important;
   width: 48px !important;
   height: 48px !important;
+  border-radius: 50% !important;
 }
 
 .case-study-section.section-accent .bento-feature .feature-card-icon {
-  background: #F8A900 !important;
+  background: rgba(248, 169, 0, 0.15) !important;
   width: 48px !important;
   height: 48px !important;
+  border-radius: 50% !important;
 }
 
 /* Hover effects for cards on orange gradient backgrounds */
