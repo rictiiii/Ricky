@@ -113,12 +113,39 @@
           </div>
 
           <section style="margin-top: var(--spacing-24); padding: var(--spacing-16) 0;">
-            <div style="max-width: 600px;">
-              <h2>About</h2>
-              <p>Senior Product Designer with 10+ years of experience shipping complex B2B SaaS platforms. I specialize in design systems, user-centered workflows, and simplifying data-rich, regulated experiences across web, desktop, and mobile.</p>
-              <p>Proven track record of delivering measurable results: +60% adoption, -40% escalations, 50% faster handoffs. I leverage AI technology and tools to enhance design efficiency and explore innovative solutions. Currently designing onboarding and merchant experiences at Shift4, helping 20,000+ businesses succeed.</p>
+            <div class="about-section-grid">
+              <div style="max-width: 600px;">
+                <h2>About</h2>
+                <p>Senior Product Designer with 10+ years of experience shipping complex B2B SaaS platforms. I specialize in design systems, user-centered workflows, and simplifying data-rich, regulated experiences across web, desktop, and mobile.</p>
+                <p>Proven track record of delivering measurable results: +60% adoption, -40% escalations, 50% faster handoffs. I leverage AI technology and tools to enhance design efficiency and explore innovative solutions. Currently designing onboarding and merchant experiences at Shift4, helping 20,000+ businesses succeed.</p>
+              </div>
+              <div>
+                <img src="memoji.png" alt="Ricky's memoji" style="width: 200px; height: auto;">
+              </div>
             </div>
           </section>
+
+          <style>
+            .about-section-grid {
+              display: grid;
+              grid-template-columns: 1fr auto;
+              gap: 60px;
+              align-items: center;
+            }
+
+            @media (max-width: 768px) {
+              .about-section-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+              }
+
+              .about-section-grid img {
+                width: 150px !important;
+                margin: 0 auto;
+                display: block;
+              }
+            }
+          </style>
 
         </div>
       </section>
