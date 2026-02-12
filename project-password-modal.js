@@ -8,21 +8,26 @@
   }
 
   function init() {
-    // Find the onboarding project card
-    const onboardingCard = document.querySelector('a[href="skytab-onboarding.html"]');
+    // Find ALL onboarding project card links (both in nav and main content)
+    const onboardingLinks = document.querySelectorAll('a[href="skytab-onboarding.html"]');
 
-    if (!onboardingCard) {
+    if (onboardingLinks.length === 0) {
       console.log('Onboarding card not found');
       return;
     }
 
-    console.log('Password modal initialized for onboarding card');
+    console.log('Password modal initialized for', onboardingLinks.length, 'onboarding links');
 
-    // Prevent default navigation
-    onboardingCard.addEventListener('click', function(e) {
-      e.preventDefault();
-      console.log('Onboarding card clicked, showing password modal');
-      showPasswordModal('skytab-onboarding.html', 'ricky');
+    // Prevent default navigation for all links
+    onboardingLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        console.log('Onboarding link clicked, showing password modal');
+        showPasswordModal('skytab-onboarding.html', 'ricky');
+        return false;
+      }, true); // Use capture phase
     });
   }
 
