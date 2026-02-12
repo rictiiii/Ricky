@@ -41,6 +41,14 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #EC4899 0%, #EF4444 100%);
+  min-height: 0;
+}
+
+/* Ensure main content has white background */
+main {
+  background: var(--color-background-primary);
+  position: relative;
+  z-index: 2;
 }
 
 /* Hero Section - Remove negative margin since nav is not fixed */
