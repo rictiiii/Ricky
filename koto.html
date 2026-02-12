@@ -16,6 +16,7 @@
   <script src="navigation.js" defer></script>
   <script src="koto/pie-charts.js" defer></script>
   <script src="chat-widget.js" defer></script>
+  <script src="go-to-top.js" defer></script>
 </head>
 <body class="case-study-page">
 
@@ -24,11 +25,18 @@
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
       <div data-us-project="7QlU2ees1t5Gk8uhghBE" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
     </div>
-    <nav class="navigation" style="position: relative; z-index: 1;">
+    <nav class="navigation">
       <div class="nav-container">
-        <div class="nav-logo">Ricky Liu</div>
+        <a href="index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Work</a>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-link">Work</a>
+            <div class="nav-dropdown-menu">
+              <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+              <a href="koto.html" class="nav-dropdown-item">Koto</a>
+              <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+            </div>
+          </div>
           <a href="#" class="nav-link">CV</a>
           <a href="contact/contact.html" class="nav-link">Contact</a>
         </div>
@@ -43,9 +51,9 @@
             <h1 class="hero-title">Koto by Toyota: Reimagining the Automotive Service Experience</h1>
             <p class="hero-subtitle">Designing a unified platform that combines automotive e-commerce with contactless digital key technology to modernize vehicle ownership</p>
             <div class="hero-details">
-              <div class="hero-detail-item">Product Design</div>
-              <div class="hero-detail-item">Automotive</div>
-              <div class="hero-detail-item">iOS & Web</div>
+              <div class="hero-detail-item">UX Research</div>
+              <div class="hero-detail-item">Design Systems</div>
+              <div class="hero-detail-item">B2C</div>
             </div>
           </div>
           <div class="hero-image-container" style="overflow: visible; position: relative; display: flex; align-items: center; justify-content: center;">
@@ -109,21 +117,17 @@
         <div class="section-divider"></div>
         <p>After defining the problem and pain points, my team worked together and came up with ideas, such as having an onboarding survey to better understand the users' needs for services. Combining with the client's directions, the app would have 2 main features:</p>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
-            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">storefront</span>
-            </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin: 32px 0;">
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="Koto/Online Shop.png" alt="Online Shop" style="width: 200px; height: 200px; margin-bottom: 48px;">
             <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Online Shop</h4>
-            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Allows users to browse, select, and purchase various automotive services and products directly from the app</p>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Allows users to browse, select, and purchase various automotive services<br>and products directly from the app</p>
           </div>
 
-          <div style="background: white; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px;">
-            <div style="width: 48px; height: 48px; border: 2px solid rgba(235, 10, 30, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-              <span class="material-icons" style="color: #EB0A1E; font-size: 24px;">vpn_key</span>
-            </div>
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="Koto/Ditital Key.png" alt="Digital Key" style="width: 200px; height: 200px; margin-bottom: 48px;">
             <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Digital Key</h4>
-            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Enhance vehicle access and control via the mobile app, offering users a contactless, secure way to unlock and start their vehicles.</p>
+            <p style="margin-bottom: 0; font-size: 14px; color: #666;">Enhance vehicle access and control via the mobile app, offering users a<br>contactless, secure way to unlock and start their vehicles.</p>
           </div>
         </div>
       </section>
@@ -193,21 +197,49 @@
         })();
         </script>
 
-        <h3>Key Pain Points Discovered</h3>
+        <h3 style="margin-top: 80px; margin-bottom: 48px;">Key Pain Points Discovered</h3>
 
         <div style="display: grid; grid-template-columns: 60% 40%; gap: 40px; align-items: center;">
           <div>
-            <h4>1. Price Opacity Creates Distrust</h4>
-            <p>Hidden fees were the #1 complaint about traditional automotive service. Users wanted to see complete pricing before committing to a service appointment. Many avoided digital booking because they feared surprise charges.</p>
+            <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 32px;">
+              <div style="width: 40px; height: 40px; background: rgba(235, 10, 30, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: #EB0A1E; font-weight: 600; font-size: 18px;">1</span>
+              </div>
+              <div>
+                <h4 style="margin-top: 0;">Price Opacity Creates Distrust</h4>
+                <p>Hidden fees were the #1 complaint about traditional automotive service. Users wanted to see complete pricing before committing to a service appointment. Many avoided digital booking because they feared surprise charges.</p>
+              </div>
+            </div>
 
-            <h4>2. Scheduling Friction Leads to Delays</h4>
-            <p>Research revealed that 67% of users still preferred in-person scheduling—not because they wanted to visit in person, but because phone calls were frustrating and existing digital solutions were clunky. The average booking took 15 minutes across multiple phone calls and confirmation emails.</p>
+            <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 32px;">
+              <div style="width: 40px; height: 40px; background: rgba(235, 10, 30, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: #EB0A1E; font-weight: 600; font-size: 18px;">2</span>
+              </div>
+              <div>
+                <h4 style="margin-top: 0;">Scheduling Friction Leads to Delays</h4>
+                <p>Research revealed that 67% of users still preferred in-person scheduling—not because they wanted to visit in person, but because phone calls were frustrating and existing digital solutions were clunky. The average booking took 15 minutes across multiple phone calls and confirmation emails.</p>
+              </div>
+            </div>
 
-            <h4>3. Physical Key Management is Inconvenient</h4>
-            <p>Users struggled with dropping off keys for service appointments, coordinating pickup times, and sharing access with family members. Service centers also cited key management as a significant operational burden.</p>
+            <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 32px;">
+              <div style="width: 40px; height: 40px; background: rgba(235, 10, 30, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: #EB0A1E; font-weight: 600; font-size: 18px;">3</span>
+              </div>
+              <div>
+                <h4 style="margin-top: 0;">Physical Key Management is Inconvenient</h4>
+                <p>Users struggled with dropping off keys for service appointments, coordinating pickup times, and sharing access with family members. Service centers also cited key management as a significant operational burden.</p>
+              </div>
+            </div>
 
-            <h4>4. No Service History or Recommendations</h4>
-            <p>Vehicle owners wanted personalized service recommendations based on their mileage and time intervals, but this information was rarely available. They had to remember maintenance schedules manually or rely on reminder stickers.</p>
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="width: 40px; height: 40px; background: rgba(235, 10, 30, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: #EB0A1E; font-weight: 600; font-size: 18px;">4</span>
+              </div>
+              <div>
+                <h4 style="margin-top: 0;">No Service History or Recommendations</h4>
+                <p>Vehicle owners wanted personalized service recommendations based on their mileage and time intervals, but this information was rarely available. They had to remember maintenance schedules manually or rely on reminder stickers.</p>
+              </div>
+            </div>
           </div>
           <div style="display: flex; justify-content: center; align-items: center;">
             <img src="Koto/User pain point.png" alt="User pain points visualization" style="width: 50%; height: auto; border-radius: 16px;">
@@ -273,38 +305,27 @@
         <div class="section-divider"></div>
 
         <h3>Information Architecture & User Flows</h3>
-        <p>Based on the research insights, I mapped out comprehensive user journeys focusing on the mobile app experience:</p>
 
-        <ul>
-          <li>Created detailed flow diagrams for service discovery and booking</li>
-          <li>Designed onboarding survey to balance data collection with user patience</li>
-          <li>Prototyped checkout flow optimizations through iterative wireframing</li>
-          <li>Mapped digital key sharing scenarios (family, valet, service center) to identify edge cases</li>
-        </ul>
-
-        <div class="case-study-image">
-          <img src="koto/koto-user-flow.png" alt="User flow diagram showing guest and logged-in state paths through the app">
-          <div class="case-study-image-caption">
-            Comprehensive user flows mapping different entry points and authentication states through the booking experience
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center;">
+        <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center; margin: 40px 0;">
           <div class="case-study-image">
-            <img src="koto/koto-wireframe-sketches.png" alt="Hand-drawn wireframe sketches in notebook showing early interface explorations" style="width: 100%;">
+            <img src="koto/koto-wireframe-sketches.png" alt="Hand-drawn wireframe sketches in notebook showing early interface explorations" style="width: 100%; border-radius: 0;">
           </div>
-          <div style="display: flex; justify-content: flex-start; align-items: center;">
-            <div class="case-study-image-caption" style="text-align: left; transform: translateY(40px);">
-              Early wireframe sketches exploring layout options<br>and information hierarchy for key screens
-            </div>
+          <div>
+            <p>Based on the research insights, I mapped out comprehensive user journeys focusing on the mobile app experience:</p>
+            <ul>
+              <li>Created detailed flow diagrams for service discovery and booking</li>
+              <li>Designed onboarding survey to balance data collection with user patience</li>
+              <li>Prototyped checkout flow optimizations through iterative wireframing</li>
+              <li>Mapped digital key sharing scenarios (family, valet, service center) to identify edge cases</li>
+            </ul>
           </div>
         </div>
 
         <h3>Low-Fidelity Wireframes</h3>
         <p>Started with wireframes to map out the complete service booking flow, from vehicle information entry to appointment confirmation. This phase focused on establishing information architecture and user flow logic.</p>
 
-        <div class="case-study-image">
-          <img src="Koto/LoFi Wireframes.png" alt="Low-fidelity wireframes showing booking flow" style="width: 100%; margin-bottom: 80px;">
+        <div class="case-study-image" style="margin-bottom: 80px; border-radius: 0 !important;">
+          <img src="Koto/LoFi Wireframes.png" alt="Low-fidelity wireframes showing booking flow" style="width: 100%; border-radius: 0 !important;">
         </div>
 
         <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center;">
@@ -319,37 +340,37 @@
 
         <h3>Brand Identity Development</h3>
 
-        <div style="width: 80%; margin-bottom: 80px;">
+        <div style="margin-bottom: 80px;">
           <h4>Mood Board</h4>
           <p>Established the visual direction drawing inspiration from luxury, sophistication, and dynamic automotive design. The mood board guided decisions around elegance, minimalism, and creative presentation.</p>
 
-          <div class="case-study-image">
-            <img src="Koto/Mood Board.png" alt="Mood board showing luxury, sophisticated, and dynamic themes" style="width: 100%;">
+          <div class="case-study-image" style="display: flex; justify-content: center;">
+            <img src="Koto/Mood Board.png" alt="Mood board showing luxury, sophisticated, and dynamic themes" style="width: 80%;">
           </div>
         </div>
 
         <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center; margin-bottom: 80px;">
           <div>
             <h4>Logo Exploration</h4>
-            <p>Developed multiple logo variations incorporating Japanese design elements. The final mark features a torii gate-inspired symbol integrated with the wordmark, representing connection and access—core themes of the platform.</p>
+            <p>Developed multiple logo variations with different approaches. The final wordmark uses a clean, bold typeface with a distinctive red dot accent following "KOTO." This simple yet memorable design creates strong brand recognition while maintaining versatility across light and dark backgrounds.</p>
           </div>
-          <div class="case-study-image">
-            <img src="Koto/Logo Exploration.png" alt="Logo exploration showing various iterations" style="width: 100%;">
+          <div class="case-study-image" style="overflow: hidden;">
+            <img src="Koto/Logo Exploration.png" alt="Logo exploration showing various iterations" style="width: 100%; max-width: 100%; height: auto; display: block;">
           </div>
         </div>
 
         <h4>Typography System</h4>
-        <p>Established a visual type scale with clear hierarchy across four sizes (Large, Medium, Regular, Small) ensuring readability and consistency across all touchpoints.</p>
+        <p style="margin-bottom: 48px;">Established a visual type scale with clear hierarchy across four sizes (Large, Medium, Regular, Small) ensuring readability and consistency across all touchpoints.</p>
 
-        <div class="case-study-image">
-          <img src="Koto/Typography Paring.png" alt="Typography system showing type scale" style="width: 100%;">
+        <div class="case-study-image" style="display: flex; justify-content: center;">
+          <img src="Koto/Typography Paring.png" alt="Typography system showing type scale" style="width: 80%;">
         </div>
 
         <h3>Component Library</h3>
         <p>Built a comprehensive design system with reusable components including navigation bars, pricing cards, calendars, booking forms, and profile elements. This ensured consistency across the platform while enabling rapid iteration.</p>
 
-        <div class="case-study-image">
-          <img src="Koto/Components.png" alt="Component library showing UI elements" style="width: 100%;">
+        <div class="case-study-image" style="display: flex; justify-content: center;">
+          <img src="Koto/Components.png" alt="Component library showing UI elements" style="width: 80%;">
         </div>
       </section>
 
@@ -398,8 +419,8 @@
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
             <img src="Koto/Appointments.png" alt="Appointments dashboard" style="width: 40%;">
           </div>
-          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="Koto/Appointment details & tracking.png" alt="Appointment tracking" style="width: 100%;">
+          <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="Koto/Appointment details & tracking.png" alt="Appointment tracking" style="width: 80%;">
           </div>
         </div>
 

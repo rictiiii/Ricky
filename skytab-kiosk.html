@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="skytab-kiosk/skytab-kiosk.css">
   <script src="navigation.js" defer></script>
   <script src="chat-widget.js" defer></script>
+  <script src="go-to-top.js" defer></script>
 </head>
 <body class="case-study-page">
 
@@ -22,11 +23,18 @@
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
       <div data-us-project="JI9DJn6PAN07InxEepgS" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
     </div>
-    <nav class="navigation" style="position: relative; z-index: 1;">
+    <nav class="navigation">
       <div class="nav-container">
-        <div class="nav-logo">Ricky Liu</div>
+        <a href="index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Work</a>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-link">Work</a>
+            <div class="nav-dropdown-menu">
+              <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+              <a href="koto.html" class="nav-dropdown-item">Koto</a>
+              <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+            </div>
+          </div>
           <a href="#" class="nav-link">CV</a>
           <a href="contact/contact.html" class="nav-link">Contact</a>
         </div>
@@ -41,13 +49,13 @@
             <h1 class="hero-title">Shift4 Kiosk: Streamlining Restaurant Self-Service Ordering</h1>
             <p class="hero-subtitle">Designing an intuitive self-ordering kiosk that reduced order time by 30% and increased kiosk adoption by 20%</p>
             <div class="hero-details">
-              <div class="hero-detail-item">Product Design</div>
-              <div class="hero-detail-item">Hardware Interface</div>
               <div class="hero-detail-item">User Testing</div>
+              <div class="hero-detail-item">Interaction Design</div>
+              <div class="hero-detail-item">B2C</div>
             </div>
           </div>
           <div class="hero-image-container">
-            <img src="skytab-kiosk/Kiosk.gif" alt="Shift4 Kiosk Interface" style="width: 100%; height: auto; border-radius: 24px;">
+            <img src="skytab-kiosk/Kiosk hero.png" alt="Shift4 Kiosk Interface" style="width: 100%; height: auto; border-radius: 24px;">
           </div>
         </div>
         <div class="hero-metrics">
@@ -514,34 +522,35 @@
 
             <div class="bento-item bento-small">
               <div style="background: white; border-radius: 24px; padding: var(--spacing-8); height: 100%; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column;">
-                <div style="margin-bottom: var(--spacing-6);">
+                <div>
                   <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">Kiosk Adoption</h4>
                   <p style="font-size: var(--font-size-sm); color: #737373;">Usage rate increase</p>
                 </div>
 
                 <!-- Circular gauge -->
-                <div style="position: relative; width: 180px; height: 180px; margin: var(--spacing-6) auto;">
-                  <svg viewBox="0 0 200 200" style="transform: rotate(-90deg);">
-                    <defs>
-                      <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#FDB913;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#F8A900;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
-                      </linearGradient>
-                    </defs>
-                    <!-- Background track -->
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="#F5F5F5" stroke-width="20"/>
-                    <!-- Progress arc (62%) -->
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#gaugeGradient)" stroke-width="20" stroke-dasharray="534" stroke-dashoffset="203" stroke-linecap="round" style="animation: drawArc 1.2s ease-out 0.6s backwards;"/>
-                  </svg>
-                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; opacity: 0; animation: fadeIn 0.5s ease-out 1.4s forwards;">62%</div>
-                    <div style="font-size: var(--font-size-xs); color: #a3a3a3; margin-top: var(--spacing-2); opacity: 0; animation: fadeIn 0.5s ease-out 1.6s forwards;">adoption rate</div>
+                <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                  <div style="position: relative; width: 180px; height: 180px;">
+                    <svg viewBox="0 0 200 200" style="transform: rotate(-90deg);">
+                      <defs>
+                        <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style="stop-color:#FDB913;stop-opacity:1" />
+                          <stop offset="50%" style="stop-color:#F8A900;stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+                        </linearGradient>
+                      </defs>
+                      <!-- Background track -->
+                      <circle cx="100" cy="100" r="85" fill="none" stroke="#F5F5F5" stroke-width="20"/>
+                      <!-- Progress arc (62%) -->
+                      <circle cx="100" cy="100" r="85" fill="none" stroke="url(#gaugeGradient)" stroke-width="20" stroke-dasharray="534" stroke-dashoffset="203" stroke-linecap="round" style="animation: drawArc 1.2s ease-out 0.6s backwards;"/>
+                    </svg>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                      <div style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a;">62%</div>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Metrics footer -->
-                <div style="margin-top: auto; padding-top: var(--spacing-6); border-top: 1px solid #F5F5F5;">
+                <div style="padding-top: var(--spacing-6); border-top: 1px solid #F5F5F5;">
                   <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span style="font-size: var(--font-size-sm); color: #737373;">42% → 62%</span>
                     <div style="display: inline-flex; align-items: center; gap: var(--spacing-2); padding: 6px 12px; background: rgba(248, 169, 0, 0.1); border-radius: 16px;">
@@ -648,21 +657,23 @@
               <h4 style="margin-bottom: var(--spacing-2); font-size: var(--font-size-base); font-weight: 600; color: #1a1a1a;">On Schedule</h4>
               <p style="font-size: var(--font-size-sm); color: #737373; margin-bottom: var(--spacing-4);">MVP delivery</p>
 
-              <div style="position: relative; width: 100px; height: 100px; margin: var(--spacing-3) 0;">
-                <svg viewBox="0 0 200 200" style="transform: rotate(-90deg);">
-                  <defs>
-                    <linearGradient id="mvpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#FDB913;stop-opacity:1" />
-                      <stop offset="50%" style="stop-color:#F8A900;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="100" cy="100" r="85" fill="none" stroke="#F5F5F5" stroke-width="16"/>
-                  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#mvpGradient)" stroke-width="16" stroke-dasharray="534" stroke-dashoffset="0" stroke-linecap="round" style="animation: drawCircle100 1.5s ease-out 2.1s backwards;"/>
-                </svg>
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                  <div style="color: #1a1a1a; font-weight: 700; font-size: 1.25rem;">100%</div>
-                  <div style="color: #a3a3a3; font-size: 10px; margin-top: 2px;">Done</div>
+              <div style="display: flex; align-items: center; justify-content: center;">
+                <div style="position: relative; width: 100px; height: 100px; margin: var(--spacing-3) 0;">
+                  <svg viewBox="0 0 200 200" style="transform: rotate(-90deg);">
+                    <defs>
+                      <linearGradient id="mvpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FDB913;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#F8A900;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="#F5F5F5" stroke-width="16"/>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#mvpGradient)" stroke-width="16" stroke-dasharray="534" stroke-dashoffset="0" stroke-linecap="round" style="animation: drawCircle100 1.5s ease-out 2.1s backwards;"/>
+                  </svg>
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                    <div style="color: #1a1a1a; font-weight: 700; font-size: 1.25rem;">100%</div>
+                    <div style="color: #a3a3a3; font-size: 10px; margin-top: 2px;">Done</div>
+                  </div>
                 </div>
               </div>
             </div>

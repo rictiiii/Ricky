@@ -8,11 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=57">
   <link rel="stylesheet" href="hero-section.css">
   <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css">
   <script src="navigation.js" defer></script>
   <script src="chat-widget.js" defer></script>
+  <script src="go-to-top.js" defer></script>
 </head>
 <body data-theme="light">
 
@@ -25,9 +27,16 @@
 
     <nav class="navigation">
       <div class="nav-container">
-        <div class="nav-logo">Ricky Liu</div>
+        <a href="index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Work</a>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-link">Work</a>
+            <div class="nav-dropdown-menu">
+              <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+              <a href="koto.html" class="nav-dropdown-item">Koto</a>
+              <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+            </div>
+          </div>
           <a href="#" class="nav-link">CV</a>
           <a href="contact/contact.html" class="nav-link">Contact</a>
         </div>

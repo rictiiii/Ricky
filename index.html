@@ -13,14 +13,22 @@
   <script src="navigation.js" defer></script>
   <script src="script.js?v=3" defer></script>
   <script src="chat-widget.js" defer></script>
+  <script src="go-to-top.js" defer></script>
 </head>
 <body>
 
   <nav class="navigation">
     <div class="nav-container">
-      <div class="nav-logo">Ricky Liu</div>
+      <a href="index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link active">Work</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link active">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+            <a href="koto.html" class="nav-dropdown-item">Koto</a>
+            <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+          </div>
+        </div>
         <a href="#" class="nav-link">CV</a>
         <a href="contact/contact.html" class="nav-link">Contact</a>
       </div>
@@ -74,9 +82,9 @@
                 <h2 class="project-title">Koto by Toyota</h2>
                 <p class="project-description">Automotive service platform combining e-commerce and digital key technology—45% more bookings and 82% digital key adoption</p>
                 <div class="project-tags">
-                  <span class="tag">Product Design</span>
-                  <span class="tag">Automotive</span>
-                  <span class="tag">iOS & Web</span>
+                  <span class="tag">UX Research</span>
+                  <span class="tag">Design Systems</span>
+                  <span class="tag">B2C</span>
                 </div>
               </div>
             </div>
@@ -88,15 +96,15 @@
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
                   <div data-us-project="JI9DJn6PAN07InxEepgS" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
                 </div>
-                <img src="homepage/Kiosk.gif" alt="Kiosk Demo" style="position: absolute; top: calc(50% + 10px); left: 50%; transform: translate(-50%, -50%); width: 60%; height: auto; z-index: 2; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                <img src="skytab-kiosk/Kiosk hero.png" alt="Kiosk Demo" style="position: absolute; top: calc(50% + 10px); left: 50%; transform: translate(-50%, -50%); width: 60%; height: auto; z-index: 2; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
               </div>
               <div class="project-content">
                 <h2 class="project-title">Shift4 Kiosk</h2>
                 <p class="project-description">Self-ordering kiosk that reduced order time by 30% and increased adoption by 20% through intuitive touch-first design</p>
                 <div class="project-tags">
-                  <span class="tag">Product Design</span>
-                  <span class="tag">Hardware Interface</span>
                   <span class="tag">User Testing</span>
+                  <span class="tag">Interaction Design</span>
+                  <span class="tag">B2C</span>
                 </div>
               </div>
             </div>

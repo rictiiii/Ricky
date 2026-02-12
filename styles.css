@@ -268,10 +268,12 @@ pre code {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 9999;
   background: transparent;
   transition: transform 0.3s ease, background 0.3s ease;
   transform: translateY(0);
+  padding: 0 80px;
+  box-sizing: border-box;
 }
 
 .navigation.nav-hidden {
@@ -286,9 +288,10 @@ pre code {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-6) 80px;
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
+  padding: var(--spacing-6) 0;
 }
 
 .nav-logo {
@@ -297,6 +300,11 @@ pre code {
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
   letter-spacing: 0;
+}
+
+a.nav-logo {
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -315,6 +323,57 @@ pre code {
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-text-primary);
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+  z-index: 10000;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 12px 20px;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-dropdown-item:hover {
+  background: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+.nav-dropdown-item:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.nav-dropdown-item:last-child {
+  border-radius: 0 0 12px 12px;
 }
 
 /* Theme Switcher */
@@ -478,6 +537,7 @@ main {
 }
 
 .hero-name-gradient {
+  color: #ffffff;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -523,10 +583,25 @@ main {
 
 /* Light theme hero styles */
 [data-theme="light"] .hero-name-gradient {
+  color: #1a1a1a;
   background: linear-gradient(180deg, #1a1a1a 0%, #6b6b6b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Feature detection fallback for browsers that don't support background-clip: text */
+@supports not (background-clip: text) or not (-webkit-background-clip: text) {
+  .hero-name-gradient {
+    -webkit-background-clip: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: inherit;
+    color: #ffffff;
+  }
+
+  [data-theme="light"] .hero-name-gradient {
+    color: #1a1a1a;
+  }
 }
 
 [data-theme="light"] .hero-cta {
@@ -2253,6 +2328,33 @@ footer {
     gap: var(--gap-md);
   }
 
+  /* Collapse two-column layouts to single column */
+  .image-grid,
+  [style*="grid-template-columns: 50% 50%"],
+  [style*="grid-template-columns: 60% 40%"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="display: grid"][style*="grid-template-columns"],
+  .research-cards-container,
+  .results-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Collapse flex rows with multiple cards */
+  [style*="display: flex"][style*="gap"] {
+    flex-direction: column !important;
+  }
+
+  /* Change arrow icons to point down between cards on mobile */
+  .research-cards-container .material-icons {
+    transform: rotate(90deg) !important;
+  }
+
+  /* Reset transforms on collapsed layouts */
+  [style*="transform: translateY"] {
+    transform: none !important;
+  }
+
   .hero {
     padding: var(--spacing-16) 0 var(--spacing-12);
   }
@@ -2679,6 +2781,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .navigation {
+    padding: 0 40px;
+  }
+
   .impact-cards {
     grid-template-columns: 1fr;
   }
@@ -2785,7 +2891,7 @@ footer {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #ef4444;
+  background: #1a1a1a;
   color: white;
   font-size: 11px;
   font-weight: 600;
@@ -2921,6 +3027,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-size: 24px;
 }
 
 .message-avatar img {
@@ -3021,7 +3128,7 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #1e40af 0%, #5b21b6 100%);
+  background: #1a1a1a;
   border: none;
   cursor: pointer;
   display: flex;
@@ -3034,7 +3141,7 @@ footer {
 
 .chat-send-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .chat-send-btn:active {
@@ -3056,15 +3163,68 @@ footer {
 }
 
 [data-theme="light"] .chat-send-btn {
-  background: linear-gradient(135deg, #ff1493, #ff7f50);
+  background: #1a1a1a;
 }
 
 [data-theme="light"] .chat-send-btn:hover {
-  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Go to Top Button */
+.go-to-top {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-text-primary);
+  color: var(--color-background-primary);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
+  z-index: 9998;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.go-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.go-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.go-to-top .material-icons {
+  font-size: 24px;
+}
+
+/* Light theme adjustments for go-to-top button */
+[data-theme="light"] .go-to-top {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+[data-theme="light"] .go-to-top:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .go-to-top {
+    bottom: 24px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+  }
+
   .ai-chat-widget {
     bottom: 16px;
     right: 16px;

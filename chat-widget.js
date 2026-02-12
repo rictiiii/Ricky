@@ -79,7 +79,7 @@ CONTACT:
 
           <div id="chat-messages" class="chat-messages">
             <div class="chat-message bot-message">
-              <div class="message-avatar"><img src="ai-badge.png" alt="AI"></div>
+              <div class="message-avatar">💡</div>
               <div class="message-content">
                 <p>Hi! I'm an AI assistant that can answer questions about Ricky's experience, projects, and skills. What would you like to know?</p>
                 <div class="quick-questions">
@@ -99,7 +99,7 @@ CONTACT:
               rows="1"
             ></textarea>
             <button id="chat-send" class="chat-send-btn" aria-label="Send message">
-              <span class="material-icons">send</span>
+              <span class="material-icons">arrow_upward</span>
             </button>
           </div>
         </div>
@@ -224,7 +224,7 @@ What would you like to know more about?`;
     const messagesContainer = document.getElementById('chat-messages');
     const messageHTML = `
       <div class="chat-message ${isUser ? 'user-message' : 'bot-message'}">
-        ${!isUser ? '<div class="message-avatar"><img src="ai-badge.png" alt="AI"></div>' : ''}
+        ${!isUser ? '<div class="message-avatar">💡</div>' : ''}
         <div class="message-content">
           ${content.split('\n').map(line => {
             if (line.startsWith('**') && line.endsWith('**')) {

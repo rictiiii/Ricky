@@ -66,12 +66,12 @@
   background: transparent;
   position: relative;
   margin-top: 0 !important;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-content-wrapper {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* Override tag colors */
