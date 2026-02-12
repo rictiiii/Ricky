@@ -11,11 +11,17 @@
     // Find the onboarding project card
     const onboardingCard = document.querySelector('a[href="skytab-onboarding.html"]');
 
-    if (!onboardingCard) return;
+    if (!onboardingCard) {
+      console.log('Onboarding card not found');
+      return;
+    }
+
+    console.log('Password modal initialized for onboarding card');
 
     // Prevent default navigation
     onboardingCard.addEventListener('click', function(e) {
       e.preventDefault();
+      console.log('Onboarding card clicked, showing password modal');
       showPasswordModal('skytab-onboarding.html', 'ricky');
     });
   }
@@ -25,10 +31,15 @@
     const sessionKey = 'password_verified_onboarding';
     const isVerified = sessionStorage.getItem(sessionKey);
 
+    console.log('Session verified status:', isVerified);
+
     if (isVerified === 'true') {
+      console.log('Already verified, navigating to:', targetUrl);
       window.location.href = targetUrl;
       return;
     }
+
+    console.log('Showing password modal');
 
     // Create modal overlay
     const overlay = document.createElement('div');
