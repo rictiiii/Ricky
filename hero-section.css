@@ -40,7 +40,7 @@
   gap: 80px;
   align-items: flex-start;
   flex: 1;
-  margin-bottom: -120px;
+  margin-bottom: 60px;
   position: relative;
 }
 
@@ -117,6 +117,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   margin-top: auto;
+  margin-bottom: 80px;
   position: relative;
   z-index: 10;
 }
