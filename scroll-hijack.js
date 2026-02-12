@@ -21,13 +21,16 @@
       const atTop = scrollTop === 0;
       const atBottom = scrollTop + clientHeight >= scrollHeight - 1;
 
-      // Check if container is in viewport
+      // Check if container is centered in viewport
       const rect = container.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.4;
+      const containerCenter = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
+      const centerThreshold = window.innerHeight * 0.3; // Within 30% of center
+      const inViewport = Math.abs(containerCenter - viewportCenter) < centerThreshold;
 
       if (inViewport) {
         const delta = e.deltaY;
-        const scrollSpeed = 3; // Multiply scroll speed to match page scrolling
+        const scrollSpeed = 10; // Significantly increase scroll speed to match page scrolling
 
         // Scrolling down
         if (delta > 0) {
@@ -55,28 +58,16 @@
     // Add wheel event listener to window
     window.addEventListener('wheel', handleWheel, { passive: false });
 
-    // Add custom scrollbar styling
+    // Add custom scrollbar styling - hide scrollbar
     const style = document.createElement('style');
     style.textContent = `
       #visual-design-scroll::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      #visual-design-scroll::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.05);
-        border-radius: 4px;
-      }
-
-      #visual-design-scroll::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-      }
-
-      #visual-design-scroll::-webkit-scrollbar-thumb:hover {
-        background: rgba(0, 0, 0, 0.3);
+        display: none;
       }
 
       #visual-design-scroll {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         scroll-behavior: smooth;
       }
     `;
