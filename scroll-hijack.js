@@ -11,7 +11,24 @@
 
     if (!scrollContainer) return;
 
-    let isScrollingContainer = false;
+    let targetScrollTop = scrollContainer.scrollTop;
+    let currentScrollTop = scrollContainer.scrollTop;
+    let animationFrameId = null;
+
+    function smoothScroll() {
+      const diff = targetScrollTop - currentScrollTop;
+      const delta = diff * 0.2; // Easing factor for smooth animation
+
+      if (Math.abs(diff) > 0.5) {
+        currentScrollTop += delta;
+        scrollContainer.scrollTop = currentScrollTop;
+        animationFrameId = requestAnimationFrame(smoothScroll);
+      } else {
+        currentScrollTop = targetScrollTop;
+        scrollContainer.scrollTop = targetScrollTop;
+        animationFrameId = null;
+      }
+    }
 
     function handleWheel(e) {
       const container = scrollContainer;
@@ -30,26 +47,30 @@
 
       if (inViewport) {
         const delta = e.deltaY;
-        const scrollSpeed = 10; // Significantly increase scroll speed to match page scrolling
+        const scrollSpeed = 2; // Reduced since we're using smooth animation
 
         // Scrolling down
         if (delta > 0) {
           if (!atBottom) {
             e.preventDefault();
-            container.scrollTop += delta * scrollSpeed;
-            isScrollingContainer = true;
-          } else {
-            isScrollingContainer = false;
+            currentScrollTop = container.scrollTop;
+            targetScrollTop = Math.min(scrollHeight - clientHeight, currentScrollTop + delta * scrollSpeed);
+
+            if (!animationFrameId) {
+              animationFrameId = requestAnimationFrame(smoothScroll);
+            }
           }
         }
         // Scrolling up
         else if (delta < 0) {
           if (!atTop) {
             e.preventDefault();
-            container.scrollTop += delta * scrollSpeed;
-            isScrollingContainer = true;
-          } else {
-            isScrollingContainer = false;
+            currentScrollTop = container.scrollTop;
+            targetScrollTop = Math.max(0, currentScrollTop + delta * scrollSpeed);
+
+            if (!animationFrameId) {
+              animationFrameId = requestAnimationFrame(smoothScroll);
+            }
           }
         }
       }
@@ -68,7 +89,6 @@
       #visual-design-scroll {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
-        scroll-behavior: smooth;
       }
     `;
     document.head.appendChild(style);
