@@ -2349,6 +2349,10 @@ footer {
     font-size: var(--font-size-lg);
   }
 
+  .project-image img[src*="Koto/Hero.png"] {
+    top: 20px !important;
+  }
+
   .case-study-header {
     padding: var(--spacing-12) 0 var(--spacing-8);
   }
