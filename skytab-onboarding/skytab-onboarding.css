@@ -466,10 +466,36 @@
 
   .wizard-arrow {
     transform: rotate(90deg);
+    justify-content: center;
+    padding: var(--spacing-2) 0;
   }
 
   .illustration-system-bullets {
     grid-template-columns: 1fr;
     gap: var(--spacing-3);
+  }
+
+  .feature-modules-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    row-gap: 8px !important;
+    column-gap: 8px !important;
+  }
+
+  div.feature-modules-grid[style] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    row-gap: 8px !important;
+    column-gap: 8px !important;
+  }
+}
+
+/* Additional mobile breakpoint for feature modules */
+@media (max-width: 1014px) {
+  div.feature-modules-grid[style] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    row-gap: 8px !important;
+    column-gap: 8px !important;
   }
 }

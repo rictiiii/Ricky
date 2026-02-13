@@ -531,7 +531,7 @@ section:last-child {
    ======================================== */
 
 .hero {
-  padding: var(--spacing-24) 0 var(--spacing-20);
+  padding: var(--spacing-24) 0 var(--spacing-10);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1222,12 +1222,12 @@ section:last-child {
    ======================================== */
 
 .work-section {
-  padding: var(--spacing-12) 0 var(--spacing-20);
+  padding: var(--spacing-6) 0 var(--spacing-20);
 }
 
 /* Light theme work section */
 [data-theme="light"] .work-section {
-  padding: var(--spacing-12) 0 var(--spacing-20);
+  padding: var(--spacing-6) 0 var(--spacing-20);
 }
 
 .work-section-title {
@@ -2184,7 +2184,7 @@ li::marker {
 
 footer {
   border-top: 1px solid var(--color-border);
-  margin-top: var(--spacing-24);
+  margin-top: var(--spacing-12);
   padding: var(--spacing-12) 0;
   position: relative;
   z-index: 1;
@@ -2308,7 +2308,7 @@ footer {
   }
 
   .hero {
-    padding: var(--spacing-16) 0 var(--spacing-12);
+    padding: var(--spacing-16) 0 var(--spacing-6);
   }
 
   .hero-name {
@@ -2321,7 +2321,7 @@ footer {
   }
 
   .work-section {
-    padding: var(--spacing-12) 0;
+    padding: var(--spacing-6) 0;
   }
 
   .project-cards {
@@ -2329,8 +2329,16 @@ footer {
   }
 
   .project-card-inner {
-    padding: var(--spacing-6);
-    gap: var(--spacing-6);
+    padding: 0;
+    gap: 0;
+  }
+
+  .project-content {
+    padding: var(--spacing-8);
+  }
+
+  .container {
+    padding: 0 40px;
   }
 
   .project-title {
@@ -2426,8 +2434,12 @@ footer {
   }
 
   .feature-cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: var(--spacing-4);
+  }
+
+  div.feature-cards-grid[style] {
+    grid-template-columns: 1fr !important;
   }
 
   .feature-card-header {
@@ -2488,7 +2500,7 @@ footer {
 
   .feature-card-icon {
     margin-bottom: var(--spacing-6);
-    justify-content: flex-start;
+    justify-content: center;
     width: 57.6px;
     height: 57.6px;
   }
@@ -2759,8 +2771,9 @@ footer {
 @media (max-width: 768px) {
   .wizard-screens-grid,
   .feature-modules-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     grid-template-rows: auto;
+    gap: 8px !important;
   }
 }
 

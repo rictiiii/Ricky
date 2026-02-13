@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hero-section.css">
-  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css">
+  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css?v=2">
   <script src="navigation.js" defer></script>
   <script src="chat-widget.js" defer></script>
   <script src="go-to-top.js" defer></script>
@@ -396,7 +396,7 @@
 
           <p>The system includes multiple feature modules for different merchant needs. Below is an example of the "Online Ordering" module activation flow, demonstrating how merchants can discover, configure, and launch new capabilities:</p>
 
-          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 32px 0;">
+          <div class="feature-modules-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 32px 0;">
             <div class="case-study-image">
               <img src="skytab-onboarding/1.png" alt="Online Ordering module step 1" style="border-radius: 16px;">
             </div>
@@ -416,6 +416,47 @@
               <img src="skytab-onboarding/6.png" alt="Online Ordering module step 6" style="border-radius: 16px;">
             </div>
           </div>
+
+          <style>
+            @media (max-width: 1400px) {
+              div.feature-modules-grid[style*="grid"] {
+                grid-template-columns: 1fr !important;
+                gap: 8px !important;
+                row-gap: 8px !important;
+                column-gap: 8px !important;
+              }
+
+              .feature-modules-grid .case-study-image {
+                margin: 0 !important;
+              }
+            }
+
+            @media (max-width: 1014px) {
+              .feature-modules-grid {
+                grid-template-columns: 1fr !important;
+                gap: 8px !important;
+                row-gap: 8px !important;
+                column-gap: 8px !important;
+              }
+
+              .feature-modules-grid .case-study-image {
+                margin: 0 !important;
+              }
+            }
+
+            @media (max-width: 768px) {
+              .feature-modules-grid {
+                grid-template-columns: 1fr !important;
+                gap: 8px !important;
+                row-gap: 8px !important;
+                column-gap: 8px !important;
+              }
+
+              .feature-modules-grid .case-study-image {
+                margin: 0 !important;
+              }
+            }
+          </style>
         </section>
 
         <section class="content-section">
